@@ -1,0 +1,1228 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-03 09:42+0200\n"
+"PO-Revision-Date: 2018-01-06 01:11+0100\n"
+"Last-Translator: Szymon Tomasz Stefanek <s.stefanek@gmail.com>\n"
+"Language-Team: Italian <it@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../SaveMyBike/SaveMyBike/UI/MenuPane/MenuView.m:86
+msgctxt "MenuView"
+msgid "About"
+msgstr "Informazioni Su"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/PrizesPage.m:43
+msgctxt "PrizesPage"
+msgid "Active"
+msgstr "Attive"
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:19
+msgctxt "BadgeDescriptor"
+msgid "Appena ti iscrivi ed installi l’APP guadagni questo badge"
+msgstr "Appena ti iscrivi ed installi l’APP guadagni questo badge"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Auth/AuthPage.m:221
+msgctxt "AuthPage"
+msgid "Authentication not configured"
+msgstr "Autenticazione non configurata"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/PrizesPage.m:38
+msgctxt "PrizesPage"
+msgid "Available"
+msgstr "Disponibili"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Auth/AuthPage.m:235
+msgctxt "AuthPage"
+msgid "Bad Auth State"
+msgstr "Stato Autenticazione Errato"
+
+#: ../SaveMyBike/SaveMyBike/Core/Backend/BackendPagedRequest.m:33
+#: ../SaveMyBike/SaveMyBike/Core/Backend/BackendPagedRequest.m:40
+msgctxt "BackendPagedRequest"
+msgid "Bad result"
+msgstr "Risultato Errato"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesPage.m:45
+msgctxt "BadgesPage"
+msgid "Badges"
+msgstr "Badge"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Home/HomePage.m:68
+msgctxt "HomePage"
+msgid "Badges"
+msgstr "Badge"
+
+#: ../SaveMyBike/SaveMyBike/UI/MenuPane/MenuView.m:84
+msgctxt "MenuView"
+msgid "Badges"
+msgstr "Badge"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:86
+msgctxt "BikeInfoTab"
+msgid "Bags"
+msgstr "Borse"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:82
+msgctxt "BikeInfoTab"
+msgid "Basket"
+msgstr "Cestino"
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:48
+msgctxt "BadgeDescriptor"
+msgid ""
+"Bene! Sei riuscito ad utilizzare la bici dodici volte in quattro settimane "
+"dentro la tua città!! Aria fresca e movimento!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:44
+msgctxt "BadgeDescriptor"
+msgid ""
+"Bene! Sei riuscito ad utilizzare la bici in città sei volte in due "
+"settimane!! Aria fresca e movimento!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Track/TrackDetailsView.m:133
+msgctxt "TrackDetailsView"
+msgid "Benefits Index"
+msgstr "Indice Benefici"
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:20
+msgctxt "BadgeDescriptor"
+msgid ""
+"Benvenuto e pronto a partire con una mobilità più sostenibile ed ecologica!! "
+"Condividi i tuoi risultati con tuoi amici e sfidali in competizioni "
+"personali!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:62
+msgctxt "BadgeDescriptor"
+msgid "Bike Surfer – 1 stella!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:66
+msgctxt "BadgeDescriptor"
+msgid "Bike Surfer – 2 stelle!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:70
+msgctxt "BadgeDescriptor"
+msgid "Bike Surfer – 3 stelle!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:38
+msgctxt "BadgeDescriptor"
+msgid "Biker - 1 stella!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:42
+msgctxt "BadgeDescriptor"
+msgid "Biker - 2 stelle!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:46
+msgctxt "BadgeDescriptor"
+msgid "Biker - 3 stelle!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Home/HomePage.m:69
+msgctxt "HomePage"
+msgid "Bikes"
+msgstr "Bici"
+
+#: ../SaveMyBike/SaveMyBike/UI/MenuPane/MenuView.m:83
+msgctxt "MenuView"
+msgid "Bikes"
+msgstr "Bici"
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:59
+msgctxt "BadgeDescriptor"
+msgid ""
+"Blocca la tua auto ed utilizza il trasporto pubblico urbano(tramvia, bus, "
+"metro)! Al decimo utilizzo del trasporto pubblico otterrai questo badge."
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:51
+msgctxt "BadgeDescriptor"
+msgid ""
+"Blocca la tua auto ed utilizza il trasporto pubblico urbano(tramvia, bus, "
+"metro)! Al primo utilizzo del trasporto pubblico otterrai questo badge."
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:55
+msgctxt "BadgeDescriptor"
+msgid ""
+"Blocca la tua auto ed utilizza il trasporto pubblico urbano(tramvia, bus, "
+"metro)! Al quinto utilizzo del trasporto pubblico otterrai questo badge."
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:76
+msgctxt "BikeInfoTab"
+msgid "Brake"
+msgstr "Freni"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:68
+msgctxt "BikeInfoTab"
+msgid "Brand"
+msgstr "Marca"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesProfileTab.m:67
+msgctxt "BadgesProfileTab"
+msgid "CO Saved"
+msgstr "CO Risparmiata"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesProfileTab.m:68
+msgctxt "BadgesProfileTab"
+msgid "CO2 Saved"
+msgstr "CO2 Risparmiata"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesProfileTab.m:72
+msgctxt "BadgesProfileTab"
+msgid "Calories"
+msgstr "Calorie"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Track/TrackDetailsView.m:131
+msgctxt "TrackDetailsView"
+msgid "Calories Consumed"
+msgstr "Calorie Consumate"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:97
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:159
+msgctxt "CompetitionPage"
+msgid "Cancel Participation"
+msgstr "Annulla Partecipazione"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:232
+msgctxt "CompetitionPage"
+msgid "Cancel Request Failed"
+msgstr "Richiesta di Annullamento Fallita"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:84
+msgctxt "BikeInfoTab"
+msgid "Cargo Rack"
+msgstr "Portapacchi"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Home/HomePage.m:67
+msgctxt "HomePage"
+msgid "Check your tracks\n"
+msgstr "Controlla le tue tracce\n"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:78
+msgctxt "BikeInfoTab"
+msgid "Color"
+msgstr "Colore"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Home/HomePage.m:66
+msgctxt "HomePage"
+msgid ""
+"Compete with\n"
+"other users"
+msgstr ""
+"Gareggia con\n"
+"altri utenti"
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:115
+msgctxt "BadgeDescriptor"
+msgid ""
+"Consuma un totale di 2.250 calorie grazie ai tuoi spostamenti “attivi” in "
+"ambito urbano ed otterrai questo badges! "
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:119
+msgctxt "BadgeDescriptor"
+msgid ""
+"Consuma un totale di 4.500 calorie grazie ai tuoi spostamenti “attivi” in "
+"ambito urbano ed otterrai questo badges! "
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:111
+msgctxt "BadgeDescriptor"
+msgid ""
+"Consuma un totale di 750 calorie grazie ai tuoi spostamenti “attivi” in "
+"ambito urbano ed otterrai questo badges! "
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Track/TrackDetailsView.m:180
+msgctxt "TrackDetailsView"
+msgid "Costs"
+msgstr "Costi"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Track/TrackDetailsView.m:80
+msgctxt "TrackDetailsView"
+msgid "DETAILS"
+msgstr "DETTAGLI"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Track/TrackDetailsView.m:192
+msgctxt "TrackDetailsView"
+msgid "Depreciation"
+msgstr "Svalutazione"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/MainView.m:176
+msgctxt "MainView"
+msgid "Disable GPS Simulation"
+msgstr "Disabilita Simulazione GPS"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:158
+msgctxt "CompetitionPage"
+msgid "Do you really want to cancel the participation in this competition?"
+msgstr "Vuoi veramente annullare la partecipazione in questa competizione?"
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:98
+msgctxt "BadgeDescriptor"
+msgid "Ecologista – 1 stella!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:102
+msgctxt "BadgeDescriptor"
+msgid "Ecologista – 2 stelle!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:106
+msgctxt "BadgeDescriptor"
+msgid "Ecologista – 3 stelle!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Track/TrackDetailsView.m:156
+msgctxt "TrackDetailsView"
+msgid "Emission"
+msgstr "Emissioni"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Track/TrackDetailsView.m:145
+msgctxt "TrackDetailsView"
+msgid "Emissions and Savings"
+msgstr "Emissioni e Risparmi"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/MainView.m:176
+msgctxt "MainView"
+msgid "Enable GPS Simulation"
+msgstr "Abilita Simulazione GPS"
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:107
+msgctxt "BadgeDescriptor"
+msgid ""
+"Evita le emissioni per 100 kg di CO2 in ambito urbano ed otterrai questo "
+"badges! "
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:99
+msgctxt "BadgeDescriptor"
+msgid ""
+"Evita le emissioni per 25 kg di CO2 in ambito urbano ed otterrai questo "
+"badges! "
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:103
+msgctxt "BadgeDescriptor"
+msgid ""
+"Evita le emissioni per 50 kg di CO2 in ambito urbano ed otterrai questo "
+"badges! "
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksPendingTracksSubTab.m:56
+msgctxt "TracksPendingTracksSubTab"
+msgid "Failed to Fetch Sessions"
+msgstr "Errore nel Fetch delle Sessioni"
+
+#: ../SaveMyBike/SaveMyBike/Core/Backend/BackendRequest.m:90
+#, c-format
+msgctxt "BackendRequest"
+msgid "Failed to decode object: %s"
+msgstr "Errore nel decoding dell'oggetto: %s"
+
+#: ../SaveMyBike/SaveMyBike/Core/Backend/BackendPagedRequest.m:74
+#, c-format
+msgctxt "BackendPagedRequest"
+msgid "Failed to decode one of the results: %s"
+msgstr "Errore nella decodifica di uno dei risultati: %s"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksRecordTab.m:236
+msgctxt "TracksRecordTab"
+msgid "Failed to start the session"
+msgstr "Errore di avvio sessione"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Auth/AuthPage.m:206
+#, objc-format
+msgctxt "AuthPage"
+msgid "Failed to start user request: %@"
+msgstr "Errore nell'avvio della richiesta utente: %@"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Auth/AuthPage.m:252
+#, objc-format
+msgctxt "AuthPage"
+msgid "Fetching user data failed: %@"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Track/TrackDetailsView.m:190
+msgctxt "TrackDetailsView"
+msgid "Fuel"
+msgstr "Carburante"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:74
+msgctxt "BikeInfoTab"
+msgid "Gear"
+msgstr "Cambio"
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:116
+msgctxt "BadgeDescriptor"
+msgid ""
+"Grande! Hai consumato 2.250 calorie grazie ai tuoi spostamenti all’interno "
+"della tua città.Non inquinando ti stai tenendo in forma!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:120
+msgctxt "BadgeDescriptor"
+msgid ""
+"Grande! Hai consumato 4.500 calorie grazie ai tuoi spostamenti all’interno "
+"della tua città.Non inquinando ti stai tenendo in forma!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:112
+msgctxt "BadgeDescriptor"
+msgid ""
+"Grande! Hai consumato 750 calorie grazie ai tuoi spostamenti all’interno "
+"della tua città.Non inquinando ti stai tenendo in forma!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:108
+msgctxt "BadgeDescriptor"
+msgid ""
+"Grande! Hai evitato di emettere 100 kg di CO2 all’interno della tua città."
+"Hai dato un grande apporto al mantenimento della qualità dell’aria nella tua "
+"città!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:100
+msgctxt "BadgeDescriptor"
+msgid ""
+"Grande! Hai evitato di emettere 25 kg di CO2 all’interno della tua città.Hai "
+"dato un grande apporto al mantenimento della qualità dell’aria nella tua "
+"città!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:104
+msgctxt "BadgeDescriptor"
+msgid ""
+"Grande! Hai evitato di emettere 50 kg di CO2 all’interno della tua città.Hai "
+"dato un grande apporto al mantenimento della qualità dell’aria nella tua "
+"città!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:128
+msgctxt "BadgeDescriptor"
+msgid ""
+"Grande! Hai evitato una spesa totale di 12 € grazie ai tuoi spostamenti "
+"sostenibili all’interno della tua città.Risparmiando, hai dato un grande "
+"apporto alla mobilità sostenibile cittadina!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:132
+msgctxt "BadgeDescriptor"
+msgid ""
+"Grande! Hai evitato una spesa totale di 24 € grazie ai tuoi spostamenti "
+"sostenibili all’interno della tua città.Risparmiando, hai dato un grande "
+"apporto alla mobilità sostenibile cittadina!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:124
+msgctxt "BadgeDescriptor"
+msgid ""
+"Grande! Hai evitato una spesa totale di 6 € grazie ai tuoi spostamenti "
+"sostenibili all’interno della tua città.Risparmiando, hai dato un grande "
+"apporto alla mobilità sostenibile cittadina!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:64
+msgctxt "BadgeDescriptor"
+msgid "Grande! Hai percorso 10 km in bici all’interno della tua città. "
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:88
+msgctxt "BadgeDescriptor"
+msgid ""
+"Grande! Hai percorso 100 km con più mezzi sostenibili!! Stai dando un grande "
+"aiuto alla collettività!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:80
+msgctxt "BadgeDescriptor"
+msgid "Grande! Hai percorso 100 km in autobus all’interno della tua città. "
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:72
+msgctxt "BadgeDescriptor"
+msgid "Grande! Hai percorso 100 km in bici all’interno della tua città. "
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:84
+msgctxt "BadgeDescriptor"
+msgid "Grande! Hai percorso 200 km in autobus all’interno della tua città. "
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:76
+msgctxt "BadgeDescriptor"
+msgid "Grande! Hai percorso 25 km in autobus all’interno della tua città. "
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:92
+msgctxt "BadgeDescriptor"
+msgid ""
+"Grande! Hai percorso 250 km con più mezzi sostenibili!! Stai dando un grande "
+"aiuto alla collettività!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:68
+msgctxt "BadgeDescriptor"
+msgid "Grande! Hai percorso 50 km in bici all’interno della tua città. "
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:96
+msgctxt "BadgeDescriptor"
+msgid ""
+"Grande! Hai percorso 500 km con più mezzi sostenibili!! Stai dando un grande "
+"aiuto alla collettività!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:60
+msgctxt "BadgeDescriptor"
+msgid ""
+"Grande! Hai utilizzato per dieci volte il trasporto pubblico! Sei più "
+"sostenibile risparmiando soldi e tempo!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:52
+msgctxt "BadgeDescriptor"
+msgid ""
+"Grande! Hai utilizzato per la prima volta il trasporto pubblico! Sei più "
+"sostenibile risparmiando soldi e tempo!  "
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:56
+msgctxt "BadgeDescriptor"
+msgid ""
+"Grande! Hai utilizzato per sei volte il trasporto pubblico! Sei più "
+"sostenibile risparmiando soldi e tempo!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Track/TrackDetailsView.m:121
+msgctxt "TrackDetailsView"
+msgid "Health Data"
+msgstr "Dati Salute"
+
+#: ../SaveMyBike/SaveMyBike/UI/MenuPane/MenuView.m:80
+msgctxt "MenuView"
+msgid "Home"
+msgstr "Home"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikePage.m:45
+msgctxt "BikePage"
+msgid "Info"
+msgstr "Info"
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:39
+msgctxt "BadgeDescriptor"
+msgid ""
+"Inizia ad utilizzare la tua bici in città!! Usa la bici tre volte in una "
+"settimana ed otterrai questo badge."
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TrackTableCell.m:131
+msgctxt "TrackTableCell"
+msgid "Invalid Track"
+msgstr "Traccia non Valida"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksActiveTracksSubTab.m:82
+msgctxt "TracksActiveTracksSubTab"
+msgid "Invalid Track"
+msgstr "Traccia non Valida"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:218
+msgctxt "CompetitionPage"
+msgid "Join Request Failed"
+msgstr "Richiesta di Partecipazione Fallita"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:223
+msgctxt "CompetitionPage"
+msgid "Join Requested"
+msgstr "Partecipazione Richiesta"
+
+#: ../SaveMyBike/SaveMyBike/UI/Control/ItemList/RemoteItemList.m:88
+msgctxt "RemoteItemList"
+msgid "Loading Failed"
+msgstr "Caricamento Fallito"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Auth/AuthPage.m:194
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Auth/AuthPage.m:203
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Auth/AuthPage.m:217
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Auth/AuthPage.m:231
+msgctxt "AuthPage"
+msgid "Loading..."
+msgstr "Caricamento..."
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesProfileTab.m:87
+msgctxt "BadgesProfileTab"
+msgid "Mail"
+msgstr "Mail"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Home/HomePage.m:69
+msgctxt "HomePage"
+msgid "Manage your bikes\n"
+msgstr "Gestisci le tue bici\n"
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:50
+msgctxt "BadgeDescriptor"
+msgid "Mobilità Collettiva – 1 stella!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:54
+msgctxt "BadgeDescriptor"
+msgid "Mobilità Collettiva – 2 stelle!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:58
+msgctxt "BadgeDescriptor"
+msgid "Mobilità Collettiva – 3 stelle!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:70
+msgctxt "BikeInfoTab"
+msgid "Model"
+msgstr "Modello"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Track/TrackDetailsView.m:196
+msgctxt "TrackDetailsView"
+msgid "Moving Time"
+msgstr "Tempo di Spostamento"
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:86
+msgctxt "BadgeDescriptor"
+msgid "Multi Surfer – 1 stella!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:90
+msgctxt "BadgeDescriptor"
+msgid "Multi Surfer – 2 stelle!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:94
+msgctxt "BadgeDescriptor"
+msgid "Multi Surfer – 3 stelle!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/PrizesPage.m:48
+msgctxt "PrizesPage"
+msgid "My Prizes"
+msgstr "i Miei Premi"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesProfileTab.m:157
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesProfileTab.m:158
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesProfileTab.m:159
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesProfileTab.m:160
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesProfileTab.m:161
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesProfileTab.m:162
+msgid "N/A"
+msgstr "N/D"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:162
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:82
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:84
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:86
+msgid "No"
+msgstr "No"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeObservationsList.m:95
+msgctxt "BikeObservationsList"
+msgid "No Observations"
+msgstr "Non ci sono Osservazioni"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksActiveTracksSubTab.m:72
+msgctxt "TracksActiveTracksSubTab"
+msgid "No Tracks Available"
+msgstr "Non ci sono Tracce"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksPendingTracksSubTab.m:86
+msgctxt "TracksPendingTracksSubTab"
+msgid "No Tracks to Upload"
+msgstr "Nessuna Traccia da Caricare"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesBadgesTab.m:82
+msgctxt "BadgesBadgesTab"
+msgid "No badges"
+msgstr "Nessun badge"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bikes/BikeListView.m:87
+msgctxt "BikeListView"
+msgid "No bikes registered"
+msgstr "Non ci sono biciclette registrate"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/ActiveCompetitionsTab.m:54
+msgctxt "ActivePrizesTab"
+msgid "No competitions"
+msgstr "Non ci sono competizioni"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/AvailableCompetitionsTab.m:51
+msgctxt "ActivePrizesTab"
+msgid "No competitions available"
+msgstr "Non ci sono competizioni"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/WonCompetitionsTab.m:51
+msgctxt "ActivePrizesTab"
+msgid "No prizes"
+msgstr "Non ci sono premi"
+
+#: ../SaveMyBike/SaveMyBike/Core/Backend/BackendPagedRequest.m:55
+#: ../SaveMyBike/SaveMyBike/Core/Backend/BackendPagedRequest.m:62
+msgctxt "BackendPagedRequest"
+msgid "No results present"
+msgstr "Non sono presenti risultati"
+
+#: ../SaveMyBike/SaveMyBike/Core/Backend/BackendRequest.m:45
+msgctxt "BackendRequest"
+msgid "Not implemented"
+msgstr "Non implementato"
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:18
+msgctxt "BadgeDescriptor"
+msgid "Nuovo Utente!! "
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeObservationsTab.m:111
+msgctxt "BikeObservationsTab"
+msgid "OBSERVATIONS"
+msgstr "OSSERVAZIONI"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikePage.m:51
+msgctxt "BikePage"
+msgid "Observations"
+msgstr "Osservazioni"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeObservationsTab.m:178
+#, objc-format
+msgctxt "BikeObservationsTab"
+msgid ""
+"Observed At: %@\n"
+"Address: %@\n"
+"Reporter Name: %@\n"
+"Reporter Type: %@\n"
+"Details: %@"
+msgstr ""
+"Data Osservazione: %@\n"
+"Indirizzo: %@\n"
+"Nome Reporter: %@\n"
+"Tipo Reporter: %@\n"
+"Dettagli: %@"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Track/TrackDetailsView.m:194
+msgctxt "TrackDetailsView"
+msgid "Operation"
+msgstr "Operazione"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:88
+msgctxt "BikeInfoTab"
+msgid "Other"
+msgstr "Altro"
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:40
+msgctxt "BadgeDescriptor"
+msgid ""
+"Ottimo! Con i tuoi spostamenti cittadini in bici sei entrato nel gruppo dei "
+"bikers!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:24
+msgctxt "BadgeDescriptor"
+msgid ""
+"Ottimo!! Hai iniziato a registrare i tuoi percorsi, così potrai collezionare "
+"nuovi badges e crescere il tuo punteggio!! Continua così! Le statistiche che "
+"ti forniamo ti mostreranno come puoi risparmiare tempo, soldi e salute, "
+"muovendoti in modo sostenibile!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:32
+msgctxt "BadgeDescriptor"
+msgid ""
+"Ottimo!! Hai registrato i tuoi percorsi in due intere settimane, così potrai "
+"collezionare nuovi badges e crescere il tuo punteggio!! Continua così! Le "
+"statistiche che ti forniamo ti mostreranno come puoi risparmiare tempo, "
+"soldi e salute, muovendoti in modo sostenibile!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:36
+msgctxt "BadgeDescriptor"
+msgid ""
+"Ottimo!! Hai registrato i tuoi percorsi in un intero mese, così potrai "
+"collezionare nuovi badges e crescere il tuo punteggio!! Continua così! Le "
+"statistiche che ti forniamo ti mostreranno come puoi risparmiare tempo, "
+"soldi e salute, muovendoti in modo sostenibile!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:28
+msgctxt "BadgeDescriptor"
+msgid ""
+"Ottimo!! Hai registrato i tuoi percorsi in una settimana intera, così potrai "
+"collezionare nuovi badges e crescere il tuo punteggio!! Continua così! Le "
+"statistiche che ti forniamo ti mostreranno come puoi risparmiare tempo, "
+"soldi e salute, muovendoti in modo sostenibile!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesProfileTab.m:69
+msgctxt "BadgesProfileTab"
+msgid "PM10 Saved"
+msgstr "PM10 Risparmiati"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:87
+msgctxt "CompetitionPage"
+msgid "Participate"
+msgstr "Pertecipa"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:237
+msgctxt "CompetitionPage"
+msgid "Participation Canceled"
+msgstr "Partecipazione Annullata"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Home/HomePage.m:66
+msgctxt "HomePage"
+msgid "Prizes"
+msgstr "Competizioni"
+
+#: ../SaveMyBike/SaveMyBike/UI/MenuPane/MenuView.m:85
+msgctxt "MenuView"
+msgid "Prizes"
+msgstr "Premi"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesPage.m:40
+msgctxt "BadgesPage"
+msgid "Profile"
+msgstr "Profilo"
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:31
+msgctxt "BadgeDescriptor"
+msgid ""
+"Quando hai registrato attività in due settimane per ogni giorno, otterrai "
+"questo badge."
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:35
+msgctxt "BadgeDescriptor"
+msgid ""
+"Quando hai registrato attività in un mese per ogni giorno, otterrai questo "
+"badge."
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:27
+msgctxt "BadgeDescriptor"
+msgid ""
+"Quando hai registrato attività in una settimana per ogni giorno, otterrai "
+"questo badge."
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:23
+msgctxt "BadgeDescriptor"
+msgid ""
+"Quando inizi ad inserire i dati di rilevamento dei tuoi modi di trasporto, "
+"ottieni questo badge"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Auth/AuthPage.m:128
+msgctxt "AuthPage"
+msgid "Ready to start your journey?"
+msgstr "Pronto per iniziare il tuo viaggio?"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Home/HomePage.m:70
+msgctxt "HomePage"
+msgid "Record"
+msgstr "Registra"
+
+#: ../SaveMyBike/SaveMyBike/UI/MenuPane/MenuView.m:81
+msgctxt "MenuView"
+msgid "Record"
+msgstr "Registra"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksPage.m:41
+msgctxt "TracksPage"
+msgid "Record"
+msgstr "Registra"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Home/HomePage.m:70
+msgctxt "HomePage"
+msgid "Record a new track\n"
+msgstr "Registra una nuova traccia\n"
+
+#: ../SaveMyBike/SaveMyBike/Core/Backend/BackendRequest.m:38
+msgctxt "BackendRequest"
+msgid "Request not started"
+msgstr "Richiesta non iniziata"
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:22
+msgctxt "BadgeDescriptor"
+msgid "Rilevatore in erba!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:26
+msgctxt "BadgeDescriptor"
+msgid "Rilevatore – 1 stella!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:30
+msgctxt "BadgeDescriptor"
+msgid "Rilevatore – 2 stelle!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:34
+msgctxt "BadgeDescriptor"
+msgid "Rilevatore – 3 stelle!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:127
+msgctxt "BadgeDescriptor"
+msgid ""
+"Risparmia un totale di 12 € grazie ai tuoi spostamenti sostenibili in ambito "
+"urbano ed otterrai questo badges! "
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:131
+msgctxt "BadgeDescriptor"
+msgid ""
+"Risparmia un totale di 24 € grazie ai tuoi spostamenti sostenibili in ambito "
+"urbano ed otterrai questo badges! "
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:123
+msgctxt "BadgeDescriptor"
+msgid ""
+"Risparmia un totale di 6 € grazie ai tuoi spostamenti sostenibili in ambito "
+"urbano ed otterrai questo badges! "
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:122
+msgctxt "BadgeDescriptor"
+msgid "Risparmiatore – 1 stella!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:126
+msgctxt "BadgeDescriptor"
+msgid "Risparmiatore – 2 stelle!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:130
+msgctxt "BadgeDescriptor"
+msgid "Risparmiatore – 3 stelle!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:43
+msgctxt "BadgeDescriptor"
+msgid ""
+"Riutilizza la bici altre tre volte in città nella prossima settimana ed "
+"otterrai questo badge."
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:47
+msgctxt "BadgeDescriptor"
+msgid ""
+"Riutilizza la bici in città altre sei volte nelle prossime due settimane ed "
+"otterrai questo badge!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Auth/AuthPage.m:98
+msgctxt "AuthPage"
+msgid "SIGN IN"
+msgstr "ACCEDI"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesProfileTab.m:70
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesProfileTab.m:71
+msgctxt "BadgesProfileTab"
+msgid "SO2 Saved"
+msgstr "SO2 Risparmiato"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:80
+msgctxt "BikeInfoTab"
+msgid "Saddle"
+msgstr "Sella"
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:110
+msgctxt "BadgeDescriptor"
+msgid "Salutista – 1 stella!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:114
+msgctxt "BadgeDescriptor"
+msgid "Salutista – 2 stelle!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:118
+msgctxt "BadgeDescriptor"
+msgid "Salutista – 3 stelle!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Track/TrackDetailsView.m:158
+msgctxt "TrackDetailsView"
+msgid "Saved"
+msgstr "Salvato"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Home/HomePage.m:68
+msgctxt "HomePage"
+msgid "See your badges\n"
+msgstr "Vedi i tuoi badge\n"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksRecordTab.m:58
+msgctxt "TracksRecordTab"
+msgid "Select a Vehicle"
+msgstr "Seleziona un Veicolo"
+
+#: ../SaveMyBike/SaveMyBike/Core/Backend/BackendRequest.m:113
+msgctxt "BackendRequest"
+msgid "Server returned no result"
+msgstr "Il server non ha restituito risultati"
+
+#: ../SaveMyBike/SaveMyBike/UI/MenuPane/MenuView.m:99
+msgctxt "MenuView"
+msgid "Sign Out"
+msgstr "Esci"
+
+#: ../SaveMyBike/SaveMyBike/UI/MenuPane/MenuView.m:82
+msgctxt "MenuView"
+msgid "Stats"
+msgstr "Statistiche"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksPage.m:47
+msgctxt "TracksPage"
+msgid "Stats"
+msgstr "Statistiche"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:66
+msgctxt "BikeInfoTab"
+msgid "Status"
+msgstr "Stato"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksStatsTab.m:38
+msgctxt "TracksStatsTab"
+msgid "TO SEND"
+msgstr "DA INVIARE"
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:74
+msgctxt "BadgeDescriptor"
+msgid "TPL Surfer – 1 stella!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:78
+msgctxt "BadgeDescriptor"
+msgid "TPL Surfer – 2 stelle!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:82
+msgctxt "BadgeDescriptor"
+msgid "TPL Surfer – 3 stelle!!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksStatsTab.m:33
+msgctxt "TracksStatsTab"
+msgid "TRACKS"
+msgstr "TRACCE"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/AvailableCompetitionsTab.m:52
+msgctxt "AvailableCompetitionsTab"
+msgid ""
+"There are no active competitions in your area at the moment. Please check "
+"this page in the nexts days"
+msgstr ""
+"Al momento non ci sono gare attive nella tua zona. Controlla questa pagina "
+"nei prossimi giorni"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeObservationsList.m:96
+msgctxt "BikeObservationsList"
+msgid "There are no registered observations of this bike"
+msgstr "Non ci sono osservazioni registrate di questa bicicletta"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksPendingTracksSubTab.m:87
+msgctxt "TracksPendingTracksSubTab"
+msgid ""
+"There are no tracks to upload. If you want to create a new track please use "
+"the \"Record\" tab."
+msgstr ""
+"Non ci sono tracce da caricare. Se vuoi creare una nuova traccia usa il tab "
+"\"Registra\"."
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksActiveTracksSubTab.m:82
+msgctxt "TracksActiveTracksSubTab"
+msgid ""
+"This track has been identified as invalid. It will not be used in indexes "
+"count and assigning prizes"
+msgstr ""
+"Questa traccia è stata identificata come non valida. Non sarà usata nelle "
+"statistiche e nell'assegnazione dei premi"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Track/TrackDetailsView.m:198
+msgctxt "TrackDetailsView"
+msgid "Total"
+msgstr "Totali"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Home/HomePage.m:67
+msgctxt "HomePage"
+msgid "Tracks"
+msgstr "Tracce"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:72
+msgctxt "BikeInfoTab"
+msgid "Type"
+msgstr "Tipo"
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:63
+msgctxt "BadgeDescriptor"
+msgid ""
+"Utilizza la bici per almeno 10 km in ambito urbano ed otterrai questo "
+"badges! Hai dato un grande apporto alla mobilità sostenibile nella tua città!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:71
+msgctxt "BadgeDescriptor"
+msgid ""
+"Utilizza la bici per almeno 100 km in ambito urbano ed otterrai questo "
+"badges! Hai dato un grande apporto alla mobilità sostenibile nella tua città!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:67
+msgctxt "BadgeDescriptor"
+msgid ""
+"Utilizza la bici per almeno 50 km in ambito urbano ed otterrai questo "
+"badges! Hai dato un grande apporto alla mobilità sostenibile nella tua città!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:79
+msgctxt "BadgeDescriptor"
+msgid ""
+"Utilizza l’autobus per almeno 100 km in ambito urbano ed otterrai questo "
+"badges! Hai dato un grande apporto alla mobilità sostenibile nella tua città!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:83
+msgctxt "BadgeDescriptor"
+msgid ""
+"Utilizza l’autobus per almeno 200 km in ambito urbano ed otterrai questo "
+"badges! Hai dato un grande apporto alla mobilità sostenibile nella tua città!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:75
+msgctxt "BadgeDescriptor"
+msgid ""
+"Utilizza l’autobus per almeno 25 km in ambito urbano ed otterrai questo "
+"badges! Hai dato un grande apporto alla mobilità sostenibile nella tua città!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:87
+msgctxt "BadgeDescriptor"
+msgid ""
+"Utilizza mezzi sostenibili per almeno 100 km in ambito urbano ed otterrai "
+"questo badges! Hai dato un grande apporto alla mobilità sostenibile nella "
+"tua città!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:91
+msgctxt "BadgeDescriptor"
+msgid ""
+"Utilizza mezzi sostenibili per almeno 250 km in ambito urbano ed otterrai "
+"questo badges! Hai dato un grande apporto alla mobilità sostenibile nella "
+"tua città!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:95
+msgctxt "BadgeDescriptor"
+msgid ""
+"Utilizza mezzi sostenibili per almeno 500 km in ambito urbano ed otterrai "
+"questo badges! Hai dato un grande apporto alla mobilità sostenibile nella "
+"tua città!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Track/TrackDetailsView.m:157
+msgctxt "TrackDetailsView"
+msgid "Value"
+msgstr "Valore"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Track/TrackDetailsView.m:96
+msgctxt "TrackDetailsView"
+msgid "Vehicles"
+msgstr "Veicoli"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Home/HomePage.m:52
+msgctxt "HomePage"
+msgid "Welcome"
+msgstr "Benvenuto"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:161
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:82
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:84
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:86
+msgid "Yes"
+msgstr "Si"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/ActiveCompetitionsTab.m:55
+msgctxt "ActiveCompetitionsPage"
+msgid "You aren't participating in any competition at the moment."
+msgstr "Al momento non stai partecipando in nessuna competizione."
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bikes/BikeListView.m:88
+msgctxt "BikeListView"
+msgid ""
+"You did not register any bike yet. Please go to your personal area of the "
+"web portal to register a bike."
+msgstr ""
+"Non hai registrato nessuna bicicletta. Vai nella tua area personale del "
+"portale web per registrare una bici."
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksActiveTracksSubTab.m:73
+msgctxt "TracksActiveTracksSubTab"
+msgid ""
+"You don't have any track recorded. To create a track, record it using the "
+"\"Record\" tab first. At the end of the recording session open the \"To Send"
+"\" tab in the \"Stats\" section and upload your data. You will see your data "
+"here after the processing ends."
+msgstr ""
+"Non hai nessuna traccia registrata. Per creare una traccia registrala usando "
+"il tab \"Registra\". Alla fine della sessione di registrazione apri il tab "
+"\"Da Inviare\" nella sezione \"Statistiche\" e carica i tuoi dati. Vedrai le "
+"tue tracce in questa pagina ad elaborazione terminata."
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesBadgesTab.m:83
+msgctxt "BadgesBadgesTab"
+msgid "You have no badges yet"
+msgstr "Ancora non hai nessun badge"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/WonCompetitionsTab.m:52
+msgctxt "WonCompetitionsTab"
+msgid ""
+"You haven't won anything yet. Please look at the 'Available' tab and "
+"participate in a competition."
+msgstr ""
+"Non hai ancora vinto nulla. Guarda nel tab \"Disponibili\" e partecipa in "
+"una competizione."
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:237
+msgctxt "CompetitionPage"
+msgid "Your participation has been canceled."
+msgstr "La tua partecipazione è stata annullata."
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:223
+msgctxt "CompetitionPage"
+msgid ""
+"Your request to participate in the competition has been received. It will "
+"appear in the \"Active\" tab once it is approved by our team."
+msgstr ""
+"La tua richiesta di partecipazione alla competizione è stata ricevuta. La competizione "
+"sarà visibile nel tab \"Attive\" non appena sarà approvata dal nostro team."
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/About/AboutPage.m:54
+#, objc-format
+msgctxt "AboutPage"
+msgid ""
+"v %@ rel %@\n"
+"\n"
+"Copyright @ 2018 Geosolutions SaS"
+msgstr ""
