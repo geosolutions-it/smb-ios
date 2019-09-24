@@ -18,6 +18,7 @@ typedef enum _TrackerState
 	TrackerStateStopped
 } TrackerState;
 
+
 @interface Tracker : NSObject
 
 + (Tracker *)instance;

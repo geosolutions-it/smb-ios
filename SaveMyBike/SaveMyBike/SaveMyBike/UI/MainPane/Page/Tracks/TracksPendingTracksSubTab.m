@@ -71,7 +71,7 @@
 	pCell.iconView.image = [UIImage imageNamed:@"track_stats"];
 
 	pCell.upperLabel.text = [s.endDateTime stringWithFormat:DateTimeFormatVisibleDateTime2];
-	pCell.lowerLabel.text = @"?";
+	pCell.lowerLabel.text = s.error ? s.error : @"";
 }
 
 - (void)onItemSelected:(NSObject *)ob

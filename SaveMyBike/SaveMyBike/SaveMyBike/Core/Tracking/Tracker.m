@@ -18,8 +18,10 @@
 #import "STSSQLSelectQueryBuilder.h"
 #import "UploadManager.h"
 #import "STSCore.h"
+#import "Vehicle.h"
 
 #import <UIKit/UIKit.h>
+#import <CoreMotion/CoreMotion.h>
 
 
 static Tracker * g_pTracker = nil;
@@ -28,6 +30,9 @@ static Tracker * g_pTracker = nil;
 {
 	NSTimer * m_pSimulationTimer;
 	CLLocation * m_pLastLocation;
+	CMMotionManager * m_pMotionManager;
+	long m_tLastLocationUpdate;
+	long m_lMinimumLocationUpdateTime;
 }
 
 @end
@@ -41,7 +46,11 @@ static Tracker * g_pTracker = nil;
 		return nil;
 	
 	m_pSimulationTimer = nil;
+	m_tLastLocationUpdate = 0;
+	m_lMinimumLocationUpdateTime = 1000;
 	
+	m_pMotionManager = [CMMotionManager new];
+
 	[STSGeoLocalizer create];
 	[[STSGeoLocalizer instance] addDelegate:self];
 		
@@ -59,10 +68,11 @@ static Tracker * g_pTracker = nil;
 		m_pSimulationTimer = nil;
 	}
 
+	m_pMotionManager = nil;
+	
 	[[STSGeoLocalizer instance] removeDelegate:self];
 	[STSGeoLocalizer destroy];
 }
-
 
 - (void)onGeoLocalizer:(id)l didUpdateLocation:(NSArray<CLLocation *> *)loc
 {
@@ -75,9 +85,12 @@ static Tracker * g_pTracker = nil;
 	if(!loc)
 		return; // ?
 	
+	
 	for(CLLocation * l in loc)
 	{
-		long timeStamp = (long)([l.timestamp timeIntervalSince1970] * 1000.0);
+		double dTimestamp = [l.timestamp timeIntervalSince1970];
+		
+		long timeStamp = (long)(dTimestamp * 1000.0);
 		
 		if(timeStamp <= _currentPoint.timeStamp)
 		{
@@ -85,9 +98,18 @@ static Tracker * g_pTracker = nil;
 			continue;
 		}
 		
+		long lTimeDiff = timeStamp - m_tLastLocationUpdate;
+		if(lTimeDiff < m_lMinimumLocationUpdateTime)
+		{
+			STS_CORE_LOG(@"Location update carries a timestamp that is less than a second from the last one (%ld < %ld)",timeStamp,m_tLastLocationUpdate);
+			continue;
+		}
+		
+		m_tLastLocationUpdate = timeStamp;
+		
 		if(
-			(fabs(_currentPoint.latitude - l.coordinate.latitude) < 0.00001) && // < 1 m circa
-			(fabs(_currentPoint.longitude - l.coordinate.longitude) < 0.00001) && // < 1 m circa
+			(fabs(_currentPoint.latitude - l.coordinate.latitude) < 0.000001) &&
+			(fabs(_currentPoint.longitude - l.coordinate.longitude) < 0.000001) &&
 			(fabs(_currentPoint.elevation  - l.altitude) < 0.5) &&
 			(fabs(_currentPoint.speed - l.speed) < 1.0) &&
 			(fabs(_currentPoint.gps_bearing - l.course) < 1.0)
@@ -188,7 +210,39 @@ static Tracker * g_pTracker = nil;
 	_currentPoint.timeStamp = (long)([[NSDate date] timeIntervalSince1970] * 1000.0);
 	_currentPoint.vehicleMode = eType;
 	
+	// reactivate
+	[[STSGeoLocalizer instance] deactivate];
+	[self _activateGeoLocalizer];
+	
 	[self _storePoint];
+}
+
+- (void)_activateGeoLocalizer
+{
+	VehicleType eType = (VehicleType)_currentPoint.vehicleMode;
+	
+	double dMinDistance = [Vehicle minimumGPSDistanceForVehicleType:eType];
+	
+	[[STSGeoLocalizer instance] setMinimumInterEventDistance:dMinDistance];
+	[[STSGeoLocalizer instance] setEnableBackgroundUpdates:true];
+
+	switch(eType)
+	{
+		case VehicleTypeCar:
+			[[STSGeoLocalizer instance] setActivityType:CLActivityTypeAutomotiveNavigation];
+			break;
+		case VehicleTypeBus:
+		case VehicleTypeTrain:
+		case VehicleTypeMotorcycle:
+			[[STSGeoLocalizer instance] setActivityType:CLActivityTypeOtherNavigation];
+			break;
+		case VehicleTypeFoot:
+		case VehicleTypeBike:
+			[[STSGeoLocalizer instance] setActivityType:CLActivityTypeFitness];
+			break;
+	}
+	
+	[[STSGeoLocalizer instance] activate];
 }
 
 - (void)_storePoint
@@ -200,6 +254,24 @@ static Tracker * g_pTracker = nil;
 	}
 	
 	_currentPoint.proximity = [UIDevice currentDevice].proximityState ? 0.0 : 100.0;
+
+	if(m_pMotionManager.accelerometerData)
+	{
+		_currentPoint.accelerationX = m_pMotionManager.accelerometerData.acceleration.x * 9.8;
+		_currentPoint.accelerationY = m_pMotionManager.accelerometerData.acceleration.y * 9.8;
+		_currentPoint.accelerationZ = m_pMotionManager.accelerometerData.acceleration.z * 9.8;
+	}
+
+	STS_CORE_LOG(
+				 @"Storing point time=%ld lat=%f, lon=%f, elev=%f, accelX=%f, accelY=%f, accelZ=%f",
+				 _currentPoint.timeStamp,
+				 _currentPoint.latitude,
+				 _currentPoint.longitude,
+				 _currentPoint.elevation,
+				 _currentPoint.accelerationX,
+				 _currentPoint.accelerationY,
+				 _currentPoint.accelerationZ
+		);
 	
 	if(![_currentPoint dbInsertToDatabase:[Database instance].connection])
 	{
@@ -237,6 +309,7 @@ static Tracker * g_pTracker = nil;
 	_currentPoint.accuracy = 15.0; // ?????
 	
 	m_pLastLocation = nil;
+	m_tLastLocationUpdate = 0.0;
 
 	[[UIDevice currentDevice] setProximityMonitoringEnabled:true];
 	
@@ -266,8 +339,15 @@ static Tracker * g_pTracker = nil;
 
 		[self _storePoint];
 	} else {
-		[[STSGeoLocalizer instance] activate];
+		[self _activateGeoLocalizer];
 	}
+	
+	if([m_pMotionManager isAccelerometerAvailable])
+	{
+		m_pMotionManager.accelerometerUpdateInterval = 0.5; // 2Hz
+		[m_pMotionManager startAccelerometerUpdates];
+	}
+	
 	return _session;
 }
 
@@ -280,6 +360,8 @@ static Tracker * g_pTracker = nil;
 
 	[[UIDevice currentDevice] setProximityMonitoringEnabled:false];
 
+	[m_pMotionManager stopAccelerometerUpdates];
+	
 	if(m_pSimulationTimer)
 	{
 		[m_pSimulationTimer invalidate];

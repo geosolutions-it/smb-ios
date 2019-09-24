@@ -18,6 +18,7 @@
 #import "STSCore.h"
 #import "NotificationManager.h"
 #import <UserNotifications/UserNotifications.h>
+#import "STSNetworkAvailabilityChecker.h"
 
 @interface AppDelegate ()<UNUserNotificationCenterDelegate,FIRMessagingDelegate>
 
@@ -74,7 +75,7 @@ static AppDelegate * g_pAppDelegate = nil;
 	
 	[[MainView instance] switchToAuthPage];
 	
-#ifdef TARGET_OS_SIMULATOR
+#if defined(TARGET_OS_SIMULATOR) && (TARGET_OS_SIMULATOR != 0)
 	// Trick for buggy iOS simulators that do not refresh. The activity indicator is animating and does refresh.
 	// This does not works for simulators that have the ugly notch in the status bar (iPhone X and friends)
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
@@ -88,7 +89,7 @@ static AppDelegate * g_pAppDelegate = nil;
 		[[UNUserNotificationCenter currentNotificationCenter]
 		 requestAuthorizationWithOptions:authOptions
 		 completionHandler:^(BOOL granted, NSError * _Nullable error) {
-			 // ...
+			 STS_CORE_LOG(@"User notification authorization completion granted=%d",granted);
 		 }];
 	} else {
 		// iOS 10 notifications aren't available; fall back to iOS 8-9 notifications.
@@ -98,6 +99,8 @@ static AppDelegate * g_pAppDelegate = nil;
 	}
 	
 	[application registerForRemoteNotifications];
+	
+	[STSNetworkAvailabilityChecker startWithInterval:30];
 	
 	return YES;
 }
@@ -122,6 +125,11 @@ static AppDelegate * g_pAppDelegate = nil;
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
 	STS_CORE_LOG(@"Remote notification");
+	for(NSString * key in userInfo.allKeys)
+	{
+		STS_CORE_LOG(@"Data: %@ -> %@",key,[userInfo objectForKey:key]);
+	}
+	completionHandler(UIBackgroundFetchResultNoData);
 }
 
 - (void)messaging:(FIRMessaging *)messaging didReceiveRegistrationToken:(NSString *)fcmToken
@@ -161,12 +169,13 @@ static AppDelegate * g_pAppDelegate = nil;
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-	// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+	[STSNetworkAvailabilityChecker startWithInterval:30];
 }
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
 	
+	[STSNetworkAvailabilityChecker stop];
 	[UploadManager destroy];
 	[Tracker destroy];
 	[NotificationManager destroy];

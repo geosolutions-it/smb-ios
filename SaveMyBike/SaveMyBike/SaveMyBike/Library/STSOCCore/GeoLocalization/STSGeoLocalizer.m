@@ -18,7 +18,7 @@ static STSGeoLocalizer * g_pSTSGeoLocalizerSingleton = nil;
 	CLLocationManager * m_pManager;
 	STSGeoLocalizerState m_eState;
 	NSTimer * m_pTimer;
-	
+	bool m_bEnableBackgroundUpdates;
 	STSDelegateArray * m_pDelegates;
 }
 
@@ -42,6 +42,7 @@ static STSGeoLocalizer * g_pSTSGeoLocalizerSingleton = nil;
 	m_pManager.delegate = self;
 	m_eState = STSGeoLocalizerStateInactive;
 	m_pDelegates = [STSDelegateArray new];
+	m_bEnableBackgroundUpdates = false;
 }
 
 - (void)_coreDestroy;
@@ -86,6 +87,21 @@ static STSGeoLocalizer * g_pSTSGeoLocalizerSingleton = nil;
 	g_pSTSGeoLocalizerSingleton = nil;
 }
 
+- (void)setMinimumInterEventDistance:(double)dMeters
+{
+	m_pManager.distanceFilter = dMeters;
+}
+
+- (void)setActivityType:(CLActivityType)eActivityType
+{
+	m_pManager.activityType = eActivityType;
+}
+
+- (void)setEnableBackgroundUpdates:(bool)bEnable
+{
+	m_bEnableBackgroundUpdates = bEnable;
+}
+
 - (void)addDelegate:(id<STSGeoLocalizerDelegate>)d
 {
 	[m_pDelegates addDelegate:d];
@@ -113,6 +129,17 @@ static STSGeoLocalizer * g_pSTSGeoLocalizerSingleton = nil;
 				// the application is able to use localization services
 				STS_CORE_LOG(@"Location authorization status authorized");
 				m_eState = STSGeoLocalizerStateActive;
+				m_pManager.desiredAccuracy = kCLLocationAccuracyBest;
+				if(m_bEnableBackgroundUpdates)
+				{
+					m_pManager.pausesLocationUpdatesAutomatically = false;
+					m_pManager.allowsBackgroundLocationUpdates = true;
+					m_pManager.showsBackgroundLocationIndicator = true;
+				} else {
+					m_pManager.pausesLocationUpdatesAutomatically = true;
+					m_pManager.allowsBackgroundLocationUpdates = false;
+					m_pManager.showsBackgroundLocationIndicator = false;
+				}
 				[m_pManager startUpdatingLocation];
 				return;
 			break;

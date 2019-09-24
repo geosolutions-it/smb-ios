@@ -14,7 +14,13 @@
 
 - (bool)start:(bool)bTriggerErrorInCaseOfFailure
 {
-	NSData * oData = [_device encodeToJSONData];
+	//NSData * oData = [_device encodeToJSONData];
+	
+	//NSString * sJSON = [_device encodeToJSONString];
+	
+	NSString * sJSON = [NSString stringWithFormat:@"{ \"type\": \"ios\", \"device_id\":\"%@\", \"registration_id\":\"%@\"}",_device.deviceId,_device.registrationId];
+	
+	NSData * oData = [sJSON dataUsingEncoding:NSUTF8StringEncoding];
 	
 	self.URL = [NSString stringWithFormat:@"%@/api/my-devices/",[Config instance].serverURL];
 	self.method = @"POST";

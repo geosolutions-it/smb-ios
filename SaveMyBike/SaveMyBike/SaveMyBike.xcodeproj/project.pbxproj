@@ -31,6 +31,8 @@
 		EE0F9E8022D2FAD900B19E11 /* tracks_page_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0F9E7D22D2FAD900B19E11 /* tracks_page_background@2x.png */; };
 		EE0F9E8122D2FAD900B19E11 /* tracks_page_background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE0F9E7E22D2FAD900B19E11 /* tracks_page_background@3x.png */; };
 		EE11370522D2F7CE000E0EA9 /* GridPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = EE11370422D2F7CE000E0EA9 /* GridPatch.m */; };
+		EE11BF9A2338652500005471 /* Vehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = EE11BF992338652500005471 /* Vehicle.m */; };
+		EE11BF9C233872AC00005471 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE11BF9B233872AC00005471 /* CoreMotion.framework */; };
 		EE14D64E22C29D8700EAAC8D /* HomePagePatch.m in Sources */ = {isa = PBXBuildFile; fileRef = EE14D64D22C29D8700EAAC8D /* HomePagePatch.m */; };
 		EE17498222F15FB600F953B6 /* TrackingSession.m in Sources */ = {isa = PBXBuildFile; fileRef = EE17497E22F15FB500F953B6 /* TrackingSession.m */; };
 		EE17498322F15FB600F953B6 /* TrackingSessionPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = EE17498122F15FB600F953B6 /* TrackingSessionPoint.m */; };
@@ -82,6 +84,33 @@
 		EE1AA20F22C1B9A600E636D2 /* record_play_pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1AA1DC22C1B9A500E636D2 /* record_play_pause@3x.png */; };
 		EE1AA21022C1B9A600E636D2 /* record_stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1AA1DD22C1B9A500E636D2 /* record_stop@2x.png */; };
 		EE1AA21122C1B9A600E636D2 /* record_walk_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE1AA1DE22C1B9A500E636D2 /* record_walk_selected@3x.png */; };
+		EE211FD72339950F0005EBA3 /* STSCore_infoRed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FBC2339950F0005EBA3 /* STSCore_infoRed@3x.png */; };
+		EE211FD82339950F0005EBA3 /* STSCore_download.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FBD2339950F0005EBA3 /* STSCore_download.png */; };
+		EE211FD92339950F0005EBA3 /* STSCore_download@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FBE2339950F0005EBA3 /* STSCore_download@3x.png */; };
+		EE211FDA2339950F0005EBA3 /* STSCore_download@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FBF2339950F0005EBA3 /* STSCore_download@2x.png */; };
+		EE211FDB2339950F0005EBA3 /* STSCore_infoRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FC02339950F0005EBA3 /* STSCore_infoRed@2x.png */; };
+		EE211FDC2339950F0005EBA3 /* STSCore_upArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FC12339950F0005EBA3 /* STSCore_upArrow.png */; };
+		EE211FDD2339950F0005EBA3 /* STSCore_threeSquaresV.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FC22339950F0005EBA3 /* STSCore_threeSquaresV.png */; };
+		EE211FDE2339950F0005EBA3 /* STSCore_x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FC32339950F0005EBA3 /* STSCore_x@2x.png */; };
+		EE211FDF2339950F0005EBA3 /* STSCore_upArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FC42339950F0005EBA3 /* STSCore_upArrow@2x.png */; };
+		EE211FE02339950F0005EBA3 /* STSCore_leftArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FC52339950F0005EBA3 /* STSCore_leftArrow@3x.png */; };
+		EE211FE12339950F0005EBA3 /* STSCore_rightArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FC62339950F0005EBA3 /* STSCore_rightArrow.png */; };
+		EE211FE22339950F0005EBA3 /* STSCore_downArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FC72339950F0005EBA3 /* STSCore_downArrow.png */; };
+		EE211FE32339950F0005EBA3 /* STSCore_x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FC82339950F0005EBA3 /* STSCore_x.png */; };
+		EE211FE42339950F0005EBA3 /* STSCore_leftArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FC92339950F0005EBA3 /* STSCore_leftArrow@2x.png */; };
+		EE211FE52339950F0005EBA3 /* STSCore_upArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FCA2339950F0005EBA3 /* STSCore_upArrow@3x.png */; };
+		EE211FE62339950F0005EBA3 /* STSCore_x@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FCB2339950F0005EBA3 /* STSCore_x@3x.png */; };
+		EE211FE72339950F0005EBA3 /* STSCore_downArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FCC2339950F0005EBA3 /* STSCore_downArrow@2x.png */; };
+		EE211FE82339950F0005EBA3 /* STSCore_threeSquaresV@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FCD2339950F0005EBA3 /* STSCore_threeSquaresV@2x.png */; };
+		EE211FE92339950F0005EBA3 /* STSCore_threeSquaresV@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FCE2339950F0005EBA3 /* STSCore_threeSquaresV@3x.png */; };
+		EE211FEA2339950F0005EBA3 /* STSCore_infoRed.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FCF2339950F0005EBA3 /* STSCore_infoRed.png */; };
+		EE211FEB2339950F0005EBA3 /* STSCore_info.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FD02339950F0005EBA3 /* STSCore_info.png */; };
+		EE211FEC2339950F0005EBA3 /* STSCore_downArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FD12339950F0005EBA3 /* STSCore_downArrow@3x.png */; };
+		EE211FED2339950F0005EBA3 /* STSCore_rightArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FD22339950F0005EBA3 /* STSCore_rightArrow@2x.png */; };
+		EE211FEE2339950F0005EBA3 /* STSCore_info@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FD32339950F0005EBA3 /* STSCore_info@3x.png */; };
+		EE211FEF2339950F0005EBA3 /* STSCore_leftArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FD42339950F0005EBA3 /* STSCore_leftArrow.png */; };
+		EE211FF02339950F0005EBA3 /* STSCore_info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FD52339950F0005EBA3 /* STSCore_info@2x.png */; };
+		EE211FF12339950F0005EBA3 /* STSCore_rightArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE211FD62339950F0005EBA3 /* STSCore_rightArrow@3x.png */; };
 		EE23864E22F1556000401F00 /* Tracker.m in Sources */ = {isa = PBXBuildFile; fileRef = EE23864D22F1556000401F00 /* Tracker.m */; };
 		EE3B16FC231CDCA6007C7215 /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B16FB231CDCA6007C7215 /* NotificationManager.m */; };
 		EE3B9DA8230911CB000CBAC7 /* Emissions.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B9DA2230911CA000CBAC7 /* Emissions.m */; };
@@ -827,6 +856,9 @@
 		EE0F9E7E22D2FAD900B19E11 /* tracks_page_background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tracks_page_background@3x.png"; sourceTree = "<group>"; };
 		EE11370322D2F7CE000E0EA9 /* GridPatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridPatch.h; sourceTree = "<group>"; };
 		EE11370422D2F7CE000E0EA9 /* GridPatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridPatch.m; sourceTree = "<group>"; };
+		EE11BF982338652500005471 /* Vehicle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vehicle.h; sourceTree = "<group>"; };
+		EE11BF992338652500005471 /* Vehicle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Vehicle.m; sourceTree = "<group>"; };
+		EE11BF9B233872AC00005471 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		EE14D64C22C29D8700EAAC8D /* HomePagePatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePagePatch.h; sourceTree = "<group>"; };
 		EE14D64D22C29D8700EAAC8D /* HomePagePatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePagePatch.m; sourceTree = "<group>"; };
 		EE17497E22F15FB500F953B6 /* TrackingSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackingSession.m; sourceTree = "<group>"; };
@@ -881,6 +913,34 @@
 		EE1AA1DC22C1B9A500E636D2 /* record_play_pause@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "record_play_pause@3x.png"; sourceTree = "<group>"; };
 		EE1AA1DD22C1B9A500E636D2 /* record_stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "record_stop@2x.png"; sourceTree = "<group>"; };
 		EE1AA1DE22C1B9A500E636D2 /* record_walk_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "record_walk_selected@3x.png"; sourceTree = "<group>"; };
+		EE211FBC2339950F0005EBA3 /* STSCore_infoRed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSCore_infoRed@3x.png"; sourceTree = "<group>"; };
+		EE211FBD2339950F0005EBA3 /* STSCore_download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STSCore_download.png; sourceTree = "<group>"; };
+		EE211FBE2339950F0005EBA3 /* STSCore_download@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSCore_download@3x.png"; sourceTree = "<group>"; };
+		EE211FBF2339950F0005EBA3 /* STSCore_download@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSCore_download@2x.png"; sourceTree = "<group>"; };
+		EE211FC02339950F0005EBA3 /* STSCore_infoRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSCore_infoRed@2x.png"; sourceTree = "<group>"; };
+		EE211FC12339950F0005EBA3 /* STSCore_upArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STSCore_upArrow.png; sourceTree = "<group>"; };
+		EE211FC22339950F0005EBA3 /* STSCore_threeSquaresV.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STSCore_threeSquaresV.png; sourceTree = "<group>"; };
+		EE211FC32339950F0005EBA3 /* STSCore_x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSCore_x@2x.png"; sourceTree = "<group>"; };
+		EE211FC42339950F0005EBA3 /* STSCore_upArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSCore_upArrow@2x.png"; sourceTree = "<group>"; };
+		EE211FC52339950F0005EBA3 /* STSCore_leftArrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSCore_leftArrow@3x.png"; sourceTree = "<group>"; };
+		EE211FC62339950F0005EBA3 /* STSCore_rightArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STSCore_rightArrow.png; sourceTree = "<group>"; };
+		EE211FC72339950F0005EBA3 /* STSCore_downArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STSCore_downArrow.png; sourceTree = "<group>"; };
+		EE211FC82339950F0005EBA3 /* STSCore_x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STSCore_x.png; sourceTree = "<group>"; };
+		EE211FC92339950F0005EBA3 /* STSCore_leftArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSCore_leftArrow@2x.png"; sourceTree = "<group>"; };
+		EE211FCA2339950F0005EBA3 /* STSCore_upArrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSCore_upArrow@3x.png"; sourceTree = "<group>"; };
+		EE211FCB2339950F0005EBA3 /* STSCore_x@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSCore_x@3x.png"; sourceTree = "<group>"; };
+		EE211FCC2339950F0005EBA3 /* STSCore_downArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSCore_downArrow@2x.png"; sourceTree = "<group>"; };
+		EE211FCD2339950F0005EBA3 /* STSCore_threeSquaresV@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSCore_threeSquaresV@2x.png"; sourceTree = "<group>"; };
+		EE211FCE2339950F0005EBA3 /* STSCore_threeSquaresV@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSCore_threeSquaresV@3x.png"; sourceTree = "<group>"; };
+		EE211FCF2339950F0005EBA3 /* STSCore_infoRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STSCore_infoRed.png; sourceTree = "<group>"; };
+		EE211FD02339950F0005EBA3 /* STSCore_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STSCore_info.png; sourceTree = "<group>"; };
+		EE211FD12339950F0005EBA3 /* STSCore_downArrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSCore_downArrow@3x.png"; sourceTree = "<group>"; };
+		EE211FD22339950F0005EBA3 /* STSCore_rightArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSCore_rightArrow@2x.png"; sourceTree = "<group>"; };
+		EE211FD32339950F0005EBA3 /* STSCore_info@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSCore_info@3x.png"; sourceTree = "<group>"; };
+		EE211FD42339950F0005EBA3 /* STSCore_leftArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = STSCore_leftArrow.png; sourceTree = "<group>"; };
+		EE211FD52339950F0005EBA3 /* STSCore_info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSCore_info@2x.png"; sourceTree = "<group>"; };
+		EE211FD62339950F0005EBA3 /* STSCore_rightArrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "STSCore_rightArrow@3x.png"; sourceTree = "<group>"; };
+		EE211FF22339988D0005EBA3 /* SaveMyBike.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SaveMyBike.entitlements; sourceTree = "<group>"; };
 		EE23864C22F1556000401F00 /* Tracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tracker.h; sourceTree = "<group>"; };
 		EE23864D22F1556000401F00 /* Tracker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tracker.m; sourceTree = "<group>"; };
 		EE3B16FA231CDCA6007C7215 /* NotificationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationManager.h; sourceTree = "<group>"; };
@@ -1867,6 +1927,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE11BF9C233872AC00005471 /* CoreMotion.framework in Frameworks */,
 				AA18B8AB1FD63F3100D1D82D /* CoreLocation.framework in Frameworks */,
 				AA58A0F51FD24F07006FAAA0 /* libsqlite3.0.tbd in Frameworks */,
 				6D5BB253A907232DBB5BEFF9 /* libPods-SaveMyBike.a in Frameworks */,
@@ -1939,6 +2000,7 @@
 		AA589E5E1FD24B1B006FAAA0 /* SaveMyBike */ = {
 			isa = PBXGroup;
 			children = (
+				EE211FF22339988D0005EBA3 /* SaveMyBike.entitlements */,
 				EE066CCA2317662C001CCC12 /* GoogleService-Info.plist */,
 				AA281CEC1FF7313900D73C8F /* Assets */,
 				EEC4098E22C46EAE0026DB6E /* Library */,
@@ -1965,6 +2027,7 @@
 		AA58A0F31FD24F06006FAAA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE11BF9B233872AC00005471 /* CoreMotion.framework */,
 				AA18B8AA1FD63F3100D1D82D /* CoreLocation.framework */,
 				AA58A0F41FD24F07006FAAA0 /* libsqlite3.0.tbd */,
 				9ED5BB45DB7AF450F5640647 /* libPods-SaveMyBike.a */,
@@ -2505,6 +2568,40 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		EE211FBB2339950F0005EBA3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EE211FBC2339950F0005EBA3 /* STSCore_infoRed@3x.png */,
+				EE211FBD2339950F0005EBA3 /* STSCore_download.png */,
+				EE211FBE2339950F0005EBA3 /* STSCore_download@3x.png */,
+				EE211FBF2339950F0005EBA3 /* STSCore_download@2x.png */,
+				EE211FC02339950F0005EBA3 /* STSCore_infoRed@2x.png */,
+				EE211FC12339950F0005EBA3 /* STSCore_upArrow.png */,
+				EE211FC22339950F0005EBA3 /* STSCore_threeSquaresV.png */,
+				EE211FC32339950F0005EBA3 /* STSCore_x@2x.png */,
+				EE211FC42339950F0005EBA3 /* STSCore_upArrow@2x.png */,
+				EE211FC52339950F0005EBA3 /* STSCore_leftArrow@3x.png */,
+				EE211FC62339950F0005EBA3 /* STSCore_rightArrow.png */,
+				EE211FC72339950F0005EBA3 /* STSCore_downArrow.png */,
+				EE211FC82339950F0005EBA3 /* STSCore_x.png */,
+				EE211FC92339950F0005EBA3 /* STSCore_leftArrow@2x.png */,
+				EE211FCA2339950F0005EBA3 /* STSCore_upArrow@3x.png */,
+				EE211FCB2339950F0005EBA3 /* STSCore_x@3x.png */,
+				EE211FCC2339950F0005EBA3 /* STSCore_downArrow@2x.png */,
+				EE211FCD2339950F0005EBA3 /* STSCore_threeSquaresV@2x.png */,
+				EE211FCE2339950F0005EBA3 /* STSCore_threeSquaresV@3x.png */,
+				EE211FCF2339950F0005EBA3 /* STSCore_infoRed.png */,
+				EE211FD02339950F0005EBA3 /* STSCore_info.png */,
+				EE211FD12339950F0005EBA3 /* STSCore_downArrow@3x.png */,
+				EE211FD22339950F0005EBA3 /* STSCore_rightArrow@2x.png */,
+				EE211FD32339950F0005EBA3 /* STSCore_info@3x.png */,
+				EE211FD42339950F0005EBA3 /* STSCore_leftArrow.png */,
+				EE211FD52339950F0005EBA3 /* STSCore_info@2x.png */,
+				EE211FD62339950F0005EBA3 /* STSCore_rightArrow@3x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		EE23864822F154A700401F00 /* Tracking */ = {
 			isa = PBXGroup;
 			children = (
@@ -2515,6 +2612,8 @@
 				EE23864C22F1556000401F00 /* Tracker.h */,
 				EE23864D22F1556000401F00 /* Tracker.m */,
 				EE574BF32307A56000A44005 /* VehicleType.h */,
+				EE11BF982338652500005471 /* Vehicle.h */,
+				EE11BF992338652500005471 /* Vehicle.m */,
 			);
 			path = Tracking;
 			sourceTree = "<group>";
@@ -2827,6 +2926,7 @@
 		EEC4098F22C46EAE0026DB6E /* STSOCCore */ = {
 			isa = PBXGroup;
 			children = (
+				EE211FBB2339950F0005EBA3 /* Assets */,
 				EEA0C139231EE9B50020C689 /* Database */,
 				EE711A87230E58690070EFCD /* Tools */,
 				EEC4099022C46EAE0026DB6E /* UI */,
@@ -3642,6 +3742,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = U3474ZTC84;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -3685,13 +3790,17 @@
 				EEC40BD522C46EAF0026DB6E /* LICENSE in Resources */,
 				EEB35C3C230F6CD2008544E8 /* bike_placeholder@3x.png in Resources */,
 				EEFBB19F230BA35600F22925 /* badge_data_collector_level0_acquired.png in Resources */,
+				EE211FEB2339950F0005EBA3 /* STSCore_info.png in Resources */,
 				EED344A0230F464900CF2B0B /* small_icon_lock_open_red_24dp@2x.png in Resources */,
 				EED143A722C2EA2F00B66EDE /* drawer_icon_about@3x.png in Resources */,
+				EE211FE62339950F0005EBA3 /* STSCore_x@3x.png in Resources */,
 				EEFBB1BB230BA36A00F22925 /* badge_disseminator_level2_acquired@3x.png in Resources */,
 				EEEC502C22FA886D0055599E /* badge_public_mobility_level3@2x.png in Resources */,
 				EE1AA20822C1B9A600E636D2 /* auth_page_logo_it.png in Resources */,
+				EE211FDA2339950F0005EBA3 /* STSCore_download@2x.png in Resources */,
 				EEFBB19C230BA35600F22925 /* badge_data_collector_level2_acquired@2x.png in Resources */,
 				EED344B7230F464900CF2B0B /* small_icon_euro@3x.png in Resources */,
+				EE211FE02339950F0005EBA3 /* STSCore_leftArrow@3x.png in Resources */,
 				EED344E4230F464900CF2B0B /* small_icon_directions_bus@2x.png in Resources */,
 				EED344E7230F464900CF2B0B /* small_icon_error.png in Resources */,
 				EEEC508322FA886D0055599E /* badge_bike_surfer_level2@3x.png in Resources */,
@@ -3716,6 +3825,7 @@
 				EEC4F27C230E353F0097316D /* track_stats_bus.png in Resources */,
 				EEFBB21B230BA3AD00F22925 /* badge_new_user_acquired.png in Resources */,
 				EEEC503922FA886D0055599E /* badge_biker_level3.png in Resources */,
+				EE211FF02339950F0005EBA3 /* STSCore_info@2x.png in Resources */,
 				EEEC505D22FA886D0055599E /* badge_healthy_level3@3x.png in Resources */,
 				EED3447A230F464900CF2B0B /* small_icon_directions_motorcycle@3x.png in Resources */,
 				EEEC507C22FA886D0055599E /* badge_new_user.png in Resources */,
@@ -3751,6 +3861,7 @@
 				EEFBB214230BA3AD00F22925 /* badge_public_mobility_level2_acquired@2x.png in Resources */,
 				EED143A522C2EA2F00B66EDE /* drawer_icon_record.png in Resources */,
 				EED3449C230F464900CF2B0B /* small_icon_directions_car@2x.png in Resources */,
+				EE211FDB2339950F0005EBA3 /* STSCore_infoRed@2x.png in Resources */,
 				EED344A6230F464900CF2B0B /* small_icon_trending_top.png in Resources */,
 				EEE63B6B22FD4252002636AA /* competition_won@3x.png in Resources */,
 				EED344C3230F464900CF2B0B /* small_icon_home@2x.png in Resources */,
@@ -3770,6 +3881,7 @@
 				EE86F99122D30CFB00339EFA /* large_gray_icon_trophy.png in Resources */,
 				EEEC506C22FA886D0055599E /* badge_tpl_surfer_level2@2x.png in Resources */,
 				EEEC505B22FA886D0055599E /* badge_ecologist_level2@3x.png in Resources */,
+				EE211FEA2339950F0005EBA3 /* STSCore_infoRed.png in Resources */,
 				EED34492230F464900CF2B0B /* small_icon_record@2x.png in Resources */,
 				EEEC502F22FA886D0055599E /* badge_new_user@2x.png in Resources */,
 				EED34482230F464900CF2B0B /* small_icon_arrow_upleft@2x.png in Resources */,
@@ -3783,6 +3895,7 @@
 				EEFBB1D9230BA38700F22925 /* badge_ecologist_level2_acquired@3x.png in Resources */,
 				EEEC507A22FA886D0055599E /* badge_money_saver_level3@2x.png in Resources */,
 				EEEC505522FA886D0055599E /* badge_public_mobility_level2@2x.png in Resources */,
+				EE211FED2339950F0005EBA3 /* STSCore_rightArrow@2x.png in Resources */,
 				EED344A2230F464900CF2B0B /* small_icon_access_time@3x.png in Resources */,
 				EEFBB215230BA3AD00F22925 /* badge_public_mobility_level3_acquired@2x.png in Resources */,
 				EE86F98D22D30CFB00339EFA /* large_gray_icon_checked@2x.png in Resources */,
@@ -3790,6 +3903,7 @@
 				EED3447F230F464900CF2B0B /* small_icon_disconnect@2x.png in Resources */,
 				EEEC507B22FA886D0055599E /* badge_multi_surfer_level3.png in Resources */,
 				EED344D8230F464900CF2B0B /* small_icon_expand_up@3x.png in Resources */,
+				EE211FDE2339950F0005EBA3 /* STSCore_x@2x.png in Resources */,
 				EED3449D230F464900CF2B0B /* small_icon_star.png in Resources */,
 				EED344C8230F464900CF2B0B /* small_icon_phone@3x.png in Resources */,
 				EE0F9E7922D2FACD00B19E11 /* geosolutions_logo@3x.png in Resources */,
@@ -3800,6 +3914,7 @@
 				EE86F98C22D30CFB00339EFA /* large_gray_icon_badge@2x.png in Resources */,
 				EED34477230F464900CF2B0B /* small_icon_line_track.png in Resources */,
 				EED344CA230F464900CF2B0B /* small_icon_cloud_upload.png in Resources */,
+				EE211FE82339950F0005EBA3 /* STSCore_threeSquaresV@2x.png in Resources */,
 				EED34498230F464900CF2B0B /* small_icon_trophy@2x.png in Resources */,
 				EED344EE230F464900CF2B0B /* small_icon_play.png in Resources */,
 				EED34466230F464900CF2B0B /* small_icon_trending_top@3x.png in Resources */,
@@ -3824,6 +3939,7 @@
 				EED1439D22C2EA2F00B66EDE /* drawer_icon_stats.png in Resources */,
 				EED344C7230F464900CF2B0B /* small_icon_home@3x.png in Resources */,
 				EEEC504522FA886D0055599E /* badge_money_saver_level2@2x.png in Resources */,
+				EE211FEC2339950F0005EBA3 /* STSCore_downArrow@3x.png in Resources */,
 				EEF11496230E2F47003A7FFF /* track_stats@2x.png in Resources */,
 				EED344B4230F464900CF2B0B /* small_icon_expand_up@2x.png in Resources */,
 				EEEC503F22FA886D0055599E /* badge_disseminator_level2.png in Resources */,
@@ -3846,9 +3962,11 @@
 				EEFBB1D8230BA38700F22925 /* badge_healthy_level3_acquired@2x.png in Resources */,
 				EEFBB1E7230BA38700F22925 /* badge_money_saver_level3_acquired@3x.png in Resources */,
 				EEEC505022FA886D0055599E /* badge_data_collector_level1@3x.png in Resources */,
+				EE211FDF2339950F0005EBA3 /* STSCore_upArrow@2x.png in Resources */,
 				EEFBB227230BA3AD00F22925 /* badge_tpl_surfer_level3_acquired@3x.png in Resources */,
 				EED143BE22C2EA3800B66EDE /* icon_right_menu@2x.png in Resources */,
 				EEEC506222FA886D0055599E /* badge_public_mobility_level2@3x.png in Resources */,
+				EE211FE32339950F0005EBA3 /* STSCore_x.png in Resources */,
 				EE5F352022D31460001C06EC /* large_gray_icon_bike@2x.png in Resources */,
 				EE9F5B6D22C2D12600D5A739 /* section_icon_badges@2x.png in Resources */,
 				EEB35C3D230F6CD2008544E8 /* bike_placeholder@2x.png in Resources */,
@@ -3859,6 +3977,7 @@
 				EED344C0230F464900CF2B0B /* small_icon_exit@3x.png in Resources */,
 				EEC4F26D230E353F0097316D /* track_stats_bike@3x.png in Resources */,
 				EED344CB230F464900CF2B0B /* small_icon_directions_bike@3x.png in Resources */,
+				EE211FF12339950F0005EBA3 /* STSCore_rightArrow@3x.png in Resources */,
 				EE1AA1F422C1B9A600E636D2 /* record_bike_selected@3x.png in Resources */,
 				EEEC506522FA886D0055599E /* badge_money_saver_level1@2x.png in Resources */,
 				EEFBB18D230BA35600F22925 /* badge_biker_level1_acquired@3x.png in Resources */,
@@ -3875,6 +3994,7 @@
 				EEC4F27B230E353F0097316D /* track_stats_train@2x.png in Resources */,
 				EEEC503522FA886D0055599E /* badge_ecologist_level1.png in Resources */,
 				EEEC505E22FA886D0055599E /* badge_ecologist_level2@2x.png in Resources */,
+				EE211FE72339950F0005EBA3 /* STSCore_downArrow@2x.png in Resources */,
 				EED344AA230F464900CF2B0B /* small_icon_trophy@3x.png in Resources */,
 				EE1AA1EF22C1B9A600E636D2 /* record_train_selected@3x.png in Resources */,
 				EEEC507622FA886D0055599E /* badge_bike_surfer_level1@3x.png in Resources */,
@@ -3894,6 +4014,7 @@
 				EEFBB21E230BA3AD00F22925 /* badge_tpl_surfer_level2_acquired@3x.png in Resources */,
 				EED3446F230F464900CF2B0B /* small_icon_about@3x.png in Resources */,
 				EEEC504222FA886D0055599E /* badge_money_saver_level3@3x.png in Resources */,
+				EE211FE52339950F0005EBA3 /* STSCore_upArrow@3x.png in Resources */,
 				EEFBB218230BA3AD00F22925 /* badge_public_mobility_level2_acquired@3x.png in Resources */,
 				EE1AA1ED22C1B9A600E636D2 /* record_bike_selected.png in Resources */,
 				EEFBB1E6230BA38700F22925 /* badge_money_saver_level1_acquired@3x.png in Resources */,
@@ -3929,6 +4050,7 @@
 				EED344AB230F464900CF2B0B /* small_icon_lock_open_red_24dp@3x.png in Resources */,
 				EEEC502E22FA886D0055599E /* badge_ecologist_level1@3x.png in Resources */,
 				EE86F98B22D30CFB00339EFA /* large_gray_icon_track@3x.png in Resources */,
+				EE211FEE2339950F0005EBA3 /* STSCore_info@3x.png in Resources */,
 				EE1AA1E022C1B9A500E636D2 /* record_bus.png in Resources */,
 				EEFBB219230BA3AD00F22925 /* badge_public_mobility_level1_acquired.png in Resources */,
 				EEEC503E22FA886D0055599E /* badge_tpl_surfer_level1@2x.png in Resources */,
@@ -3993,9 +4115,11 @@
 				EEFBB195230BA35600F22925 /* badge_biker_level2_acquired.png in Resources */,
 				EED344C5230F464900CF2B0B /* small_icon_heart_pulse@2x.png in Resources */,
 				EE1AA1F222C1B9A600E636D2 /* record_car_selected@3x.png in Resources */,
+				EE211FD72339950F0005EBA3 /* STSCore_infoRed@3x.png in Resources */,
 				EE0F9E7F22D2FAD900B19E11 /* tracks_page_background.png in Resources */,
 				EED344DF230F464900CF2B0B /* small_icon_euro@2x.png in Resources */,
 				EEFBB221230BA3AD00F22925 /* badge_public_mobility_level3_acquired@3x.png in Resources */,
+				EE211FEF2339950F0005EBA3 /* STSCore_leftArrow.png in Resources */,
 				EEEC506F22FA886D0055599E /* badge_multi_surfer_level3@3x.png in Resources */,
 				EEFBB1DF230BA38700F22925 /* badge_healthy_level1_acquired@2x.png in Resources */,
 				EEFBB1E4230BA38700F22925 /* badge_multi_surfer_level1_acquired@2x.png in Resources */,
@@ -4027,6 +4151,7 @@
 				EED34493230F464900CF2B0B /* small_icon_dashboard.png in Resources */,
 				EED344E8230F464900CF2B0B /* small_icon_location.png in Resources */,
 				EEE63B6922FD4252002636AA /* competition_waiting.png in Resources */,
+				EE211FDD2339950F0005EBA3 /* STSCore_threeSquaresV.png in Resources */,
 				EED344AC230F464900CF2B0B /* small_icon_dissatisfied@2x.png in Resources */,
 				EED3448F230F464900CF2B0B /* small_icon_place@3x.png in Resources */,
 				EE1AA20922C1B9A600E636D2 /* record_bus_selected@3x.png in Resources */,
@@ -4090,11 +4215,13 @@
 				EEEC504F22FA886D0055599E /* badge_money_saver_level1.png in Resources */,
 				EEFBB1EF230BA38700F22925 /* badge_money_saver_level1_acquired.png in Resources */,
 				EED143C022C2EA3800B66EDE /* icon_drawer_menu@2x.png in Resources */,
+				EE211FD82339950F0005EBA3 /* STSCore_download.png in Resources */,
 				EE86F99722D30D0D00339EFA /* record_moto_selected@3x.png in Resources */,
 				EED344A7230F464900CF2B0B /* small_icon_fuel@3x.png in Resources */,
 				EEEC508222FA886D0055599E /* badge_healthy_level2@2x.png in Resources */,
 				EE9F5B6322C2D12600D5A739 /* section_icon_prizes@3x.png in Resources */,
 				EED34487230F464900CF2B0B /* small_icon_phone.png in Resources */,
+				EE211FE42339950F0005EBA3 /* STSCore_leftArrow@2x.png in Resources */,
 				EEEC503D22FA886D0055599E /* badge_multi_surfer_level3@2x.png in Resources */,
 				EED143BF22C2EA3800B66EDE /* icon_right_menu@3x.png in Resources */,
 				EEC4F27A230E353F0097316D /* track_stats_motorcycle@2x.png in Resources */,
@@ -4112,6 +4239,7 @@
 				EEC4F26F230E353F0097316D /* track_stats_error@2x.png in Resources */,
 				EE1AA1EC22C1B9A600E636D2 /* record_bike@2x.png in Resources */,
 				EED344BC230F464900CF2B0B /* small_icon_trash@3x.png in Resources */,
+				EE211FE12339950F0005EBA3 /* STSCore_rightArrow.png in Resources */,
 				EEEC506D22FA886D0055599E /* badge_disseminator_level1.png in Resources */,
 				EED344C4230F464900CF2B0B /* small_icon_account_circle@3x.png in Resources */,
 				EE1AA1FB22C1B9A600E636D2 /* auth_page_logo_it@2x.png in Resources */,
@@ -4121,6 +4249,7 @@
 				EED34496230F464900CF2B0B /* small_icon_phone@2x.png in Resources */,
 				EEFBB21F230BA3AD00F22925 /* badge_public_mobility_level3_acquired.png in Resources */,
 				EED344EC230F464900CF2B0B /* small_icon_directions_motorcycle@2x.png in Resources */,
+				EE211FD92339950F0005EBA3 /* STSCore_download@3x.png in Resources */,
 				EED34473230F464900CF2B0B /* small_icon_account_circle.png in Resources */,
 				EED344AF230F464900CF2B0B /* small_icon_trash.png in Resources */,
 				EEFBB224230BA3AD00F22925 /* badge_public_mobility_level1_acquired@3x.png in Resources */,
@@ -4150,11 +4279,13 @@
 				EE86F99522D30D0D00339EFA /* record_moto_selected.png in Resources */,
 				EE9F5B6622C2D12600D5A739 /* section_icon_badges.png in Resources */,
 				EEF11497230E2F47003A7FFF /* track_stats.png in Resources */,
+				EE211FE22339950F0005EBA3 /* STSCore_downArrow.png in Resources */,
 				EE0F9E7222D2FAB700B19E11 /* background_grey.png in Resources */,
 				EEFBB1E9230BA38700F22925 /* badge_money_saver_level2_acquired@3x.png in Resources */,
 				EE5F351F22D31460001C06EC /* large_gray_icon_bike@3x.png in Resources */,
 				EEEC502D22FA886D0055599E /* badge_tpl_surfer_level1.png in Resources */,
 				EED143A122C2EA2F00B66EDE /* drawer_icon_sign_out@2x.png in Resources */,
+				EE211FDC2339950F0005EBA3 /* STSCore_upArrow.png in Resources */,
 				EED34464230F464900CF2B0B /* small_icon_access_time_black_24dp.png in Resources */,
 				EEEC503622FA886D0055599E /* badge_biker_level2.png in Resources */,
 				EED344DD230F464900CF2B0B /* small_icon_record.png in Resources */,
@@ -4178,6 +4309,7 @@
 				EE1AA21122C1B9A600E636D2 /* record_walk_selected@3x.png in Resources */,
 				EEFBB1B8230BA36A00F22925 /* badge_ecologist_level1_acquired@2x.png in Resources */,
 				EED3449B230F464900CF2B0B /* small_icon_record@3x.png in Resources */,
+				EE211FE92339950F0005EBA3 /* STSCore_threeSquaresV@3x.png in Resources */,
 				EEFBB1FC230BA39700F22925 /* badge_multi_surfer_level3_acquired.png in Resources */,
 				EEFBB1B7230BA36A00F22925 /* badge_disseminator_level3_acquired.png in Resources */,
 				EEEC506022FA886D0055599E /* badge_tpl_surfer_level1@3x.png in Resources */,
@@ -4406,6 +4538,7 @@
 				EEC40BAE22C46EAF0026DB6E /* M13ProgressViewRadiative.m in Sources */,
 				EE48ACFD231E21F3001CA79A /* BikeObservationProperties.m in Sources */,
 				EEC40C0E22C46EAF0026DB6E /* STSDownload.m in Sources */,
+				EE11BF9A2338652500005471 /* Vehicle.m in Sources */,
 				EE5C255522D05F8600E8E7CD /* SegmentBrief.m in Sources */,
 				EEC40C6D22C46EAF0026DB6E /* GettextTranslations.m in Sources */,
 				EEC40C5A22C46EAF0026DB6E /* STSJSONObjectDownloader.m in Sources */,
@@ -4617,6 +4750,7 @@
 			baseConfigurationReference = 79B71934306751690ADC4C1F /* Pods-SaveMyBike.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SaveMyBike/SaveMyBike.entitlements;
 				DEVELOPMENT_TEAM = U3474ZTC84;
 				INFOPLIST_FILE = SaveMyBike/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -4630,6 +4764,7 @@
 			baseConfigurationReference = 080428858A5A9B6B08FE1274 /* Pods-SaveMyBike.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SaveMyBike/SaveMyBike.entitlements;
 				DEVELOPMENT_TEAM = U3474ZTC84;
 				INFOPLIST_FILE = SaveMyBike/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

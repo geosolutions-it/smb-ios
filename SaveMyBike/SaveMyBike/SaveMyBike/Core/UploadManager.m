@@ -23,6 +23,8 @@
 #import "Globals.h"
 #import "SSZipArchive.h"
 #import "STSFile.h"
+#import "STSNetworkAvailabilityChecker.h"
+#import "STSI18n.h"
 
 static UploadManager * g_pUploadManager = nil;
 
@@ -49,7 +51,7 @@ static UploadManager * g_pUploadManager = nil;
 	m_pStateObservers = [STSDelegateArray new];
 	m_pTimer = nil;
 	m_pUploadFileRequest = nil;
-
+	
 	// FIXME: Cleanup directory for stale *zip and *csv files?
 	
 	[self _cleanupDatabase];
@@ -61,6 +63,7 @@ static UploadManager * g_pUploadManager = nil;
 	[m_pTimer invalidate];
 	m_pTimer = nil;
 	[m_pStateObservers removeAllDelegates];
+
 	m_pStateObservers = nil;
 }
 
@@ -325,6 +328,13 @@ static UploadManager * g_pUploadManager = nil;
 		return;
 	}
 	
+	if(![STSNetworkAvailabilityChecker networkAvailable])
+	{
+		STS_CORE_LOG(@"Network not avaialble");
+		[self _restartTimerWithTimeout:10.0];
+		return;
+	}
+	
 	TrackingSession * pSession = [self _fetchFirstTrackingSessionToUpload];
 	if(!pSession)
 	{
@@ -445,6 +455,7 @@ static UploadManager * g_pUploadManager = nil;
 		STS_CORE_LOG_ERROR(@"Error is not critical and upload attempts are less than 10: will retry");
 		
 		pSession.uploadAttempts = pSession.uploadAttempts + 1;
+		pSession.error = __tr(@"upload failed - will rery");
 		
 		if([pSession dbUpdateInDatabase:[Database instance].connection])
 			return;

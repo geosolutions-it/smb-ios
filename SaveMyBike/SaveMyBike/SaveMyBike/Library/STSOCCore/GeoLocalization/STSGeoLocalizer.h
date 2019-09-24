@@ -48,6 +48,10 @@ typedef enum _STSGeoLocalizerState
 
 - (CLLocation *)lastKnownLocation;
 
+- (void)setMinimumInterEventDistance:(double)dMeters;
+- (void)setEnableBackgroundUpdates:(bool)bEnable;
+- (void)setActivityType:(CLActivityType)eActivityType;
+
 - (void)addDelegate:(id<STSGeoLocalizerDelegate>)d;
 - (void)removeDelegate:(id<STSGeoLocalizerDelegate>)d;
 

@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 
 #import "STSCachedImageDownloader.h"
+#import "STSNetworkAvailabilityChecker.h"
 
 #import "Config.h"
 
@@ -46,7 +47,6 @@ static Globals * g_pGlobals = nil;
 
 - (void)coreDone
 {
-	
 }
 
 + (Globals *)instance
