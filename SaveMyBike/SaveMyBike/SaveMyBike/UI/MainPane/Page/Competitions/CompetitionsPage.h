@@ -1,5 +1,5 @@
 //
-//  PrizesPage.h
+//  CompetitionsPage.h
 //  SaveMyBike
 //
 //  Created by Szymon Tomasz Stefanek on 18/06/2019.
@@ -8,6 +8,6 @@
 
 #import "Page.h"
 
-@interface PrizesPage : Page
+@interface CompetitionsPage : Page
 
 @end

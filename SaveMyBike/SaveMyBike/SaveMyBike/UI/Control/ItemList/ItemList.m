@@ -196,20 +196,23 @@
 {
 	if(!m_pSampleCell)
 	{
-		m_pSampleCell = [STSSimpleTableViewCellWithImageAndTwoLabels new];
+		STSSimpleTableViewCell * c = [self onCreateTableViewCell];
+		if([c isKindOfClass:[STSSimpleTableViewCellWithImageAndTwoLabels class]])
+			m_pSampleCell = (STSSimpleTableViewCellWithImageAndTwoLabels *)c;
+		else
+			m_pSampleCell = [STSSimpleTableViewCellWithImageAndTwoLabels new];
 		m_pSampleCell.upperLabel.text = @"AAA BBB CCC";
 		m_pSampleCell.lowerLabel.text = @"aaaaaaa aaaaa uewqoi ueiqeequoqeu qeuoeqweiqwepoi i wqpeiepqow ieoqeqwyiepoqw iq eqewq ewoqieu iq eow eowq uewq eq ueqweqwu eoqw ieowu ewqe";
 		m_pSampleCell.imageView.image = [UIImage imageNamed:@"large_gray_icon_trophy"];
-	
-		[m_pSampleCell.grid setColumn:0 fixedWidth:m_fImageSize];
-		m_pSampleCell.lowerLabel.adjustsFontSizeToFitWidth = NO;
-		m_pSampleCell.lowerLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-		m_pSampleCell.lowerLabel.numberOfLines = 2;
 	}
 	
-	float fCellHeight = [m_pSampleCell.grid intrinsicContentSize].height;
-	
 	STSDisplay * dpy = [STSDisplay instance];
+
+	// needed to avoid broken intrinsic contents size
+	m_pSampleCell.grid.frame = CGRectMake(0,0,[dpy minorScreenDimensionFractionToScreenUnits:1.0],[dpy minorScreenDimensionFractionToScreenUnits:1.0]);
+	
+	float fCellHeight = [m_pSampleCell intrinsicContentSize].height;
+	
 	
 	float fMinHeight = m_fImageSize + [dpy millimetersToScreenUnits:2.0];
 	

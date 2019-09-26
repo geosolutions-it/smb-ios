@@ -119,6 +119,12 @@
 		EE3B9DB6230A3CE9000CBAC7 /* RemoteItemList.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B9DB2230A3CE9000CBAC7 /* RemoteItemList.m */; };
 		EE3B9DB7230A3CE9000CBAC7 /* LocalItemList.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B9DB3230A3CE9000CBAC7 /* LocalItemList.m */; };
 		EE3B9DBA230A3D04000CBAC7 /* ItemList.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B9DB9230A3D04000CBAC7 /* ItemList.m */; };
+		EE3C3CC4233C404800F683BC /* CompetitionsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3C3CBB233C404800F683BC /* CompetitionsPage.m */; };
+		EE3C3CC5233C404800F683BC /* ActiveCompetitionsTab.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3C3CBC233C404800F683BC /* ActiveCompetitionsTab.m */; };
+		EE3C3CC6233C404800F683BC /* WonCompetitionsTab.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3C3CBD233C404800F683BC /* WonCompetitionsTab.m */; };
+		EE3C3CC7233C404800F683BC /* CompetitionPage.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3C3CBE233C404800F683BC /* CompetitionPage.m */; };
+		EE3C3CC8233C404800F683BC /* AvailableCompetitionsTab.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3C3CC0233C404800F683BC /* AvailableCompetitionsTab.m */; };
+		EE3C3CCB233C411D00F683BC /* TitleImageAndDescriptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3C3CCA233C411D00F683BC /* TitleImageAndDescriptionView.m */; };
 		EE48ACFD231E21F3001CA79A /* BikeObservationProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EE48ACFC231E21F3001CA79A /* BikeObservationProperties.m */; };
 		EE51A7CE230BBCFA004B3CED /* TrackPage.m in Sources */ = {isa = PBXBuildFile; fileRef = EE51A7CD230BBCFA004B3CED /* TrackPage.m */; };
 		EE5890C623165612004920E6 /* BikePage.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5890C523165612004920E6 /* BikePage.m */; };
@@ -169,7 +175,6 @@
 		EE60EF4C23079AB100F5B3AF /* Schema.m in Sources */ = {isa = PBXBuildFile; fileRef = EE60EF4A23079AB100F5B3AF /* Schema.m */; };
 		EE6A5DD3231E47C7006B9884 /* BikeObservationBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6A5DD1231E47C7006B9884 /* BikeObservationBase.m */; };
 		EE711A8D230F39090070EFCD /* STSPair.m in Sources */ = {isa = PBXBuildFile; fileRef = EE711A8C230F39090070EFCD /* STSPair.m */; };
-		EE71EB1D22C466BF004F3231 /* PrizesPage.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71EB1C22C466BF004F3231 /* PrizesPage.m */; };
 		EE71EB2122C466E6004F3231 /* BadgesPage.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71EB2022C466E6004F3231 /* BadgesPage.m */; };
 		EE71EB2522C46720004F3231 /* BikesPage.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71EB2422C46720004F3231 /* BikesPage.m */; };
 		EE71EB2922C46757004F3231 /* AboutPage.m in Sources */ = {isa = PBXBuildFile; fileRef = EE71EB2822C46757004F3231 /* AboutPage.m */; };
@@ -413,11 +418,7 @@
 		EEC4F27F230E353F0097316D /* track_stats_walk.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC4F267230E353F0097316D /* track_stats_walk.png */; };
 		EEC4F282230E493E0097316D /* TrackDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC4F281230E493E0097316D /* TrackDetailsView.m */; };
 		EEC55AE1230BBF6A00FABB1F /* MapDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC55AE0230BBF6A00FABB1F /* MapDisplay.m */; };
-		EECF53FE22FBD2FF0021EA7D /* CompetitionPage.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF53FD22FBD2FF0021EA7D /* CompetitionPage.m */; };
 		EECF540122FBE6770021EA7D /* BackendRequestParticipateInCompetition.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF540022FBE6770021EA7D /* BackendRequestParticipateInCompetition.m */; };
-		EECF540422FBF4ED0021EA7D /* AvailableCompetitionsTab.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF540322FBF4ED0021EA7D /* AvailableCompetitionsTab.m */; };
-		EECF540722FBF51F0021EA7D /* ActiveCompetitionsTab.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF540622FBF51F0021EA7D /* ActiveCompetitionsTab.m */; };
-		EECF540A22FBF5470021EA7D /* WonCompetitionsTab.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF540922FBF5470021EA7D /* WonCompetitionsTab.m */; };
 		EECF540D22FBFA7D0021EA7D /* BackendRequestCancelParticipationInCompetition.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF540C22FBFA7D0021EA7D /* BackendRequestCancelParticipationInCompetition.m */; };
 		EED1439B22C2EA2F00B66EDE /* drawer_icon_badges@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EED1438022C2EA2D00B66EDE /* drawer_icon_badges@2x.png */; };
 		EED1439C22C2EA2F00B66EDE /* drawer_icon_home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EED1438122C2EA2D00B66EDE /* drawer_icon_home@3x.png */; };
@@ -957,6 +958,18 @@
 		EE3B9DB5230A3CE9000CBAC7 /* LocalItemList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalItemList.h; sourceTree = "<group>"; };
 		EE3B9DB8230A3D04000CBAC7 /* ItemList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemList.h; sourceTree = "<group>"; };
 		EE3B9DB9230A3D04000CBAC7 /* ItemList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemList.m; sourceTree = "<group>"; };
+		EE3C3CBA233C404800F683BC /* AvailableCompetitionsTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvailableCompetitionsTab.h; sourceTree = "<group>"; };
+		EE3C3CBB233C404800F683BC /* CompetitionsPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompetitionsPage.m; sourceTree = "<group>"; };
+		EE3C3CBC233C404800F683BC /* ActiveCompetitionsTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveCompetitionsTab.m; sourceTree = "<group>"; };
+		EE3C3CBD233C404800F683BC /* WonCompetitionsTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WonCompetitionsTab.m; sourceTree = "<group>"; };
+		EE3C3CBE233C404800F683BC /* CompetitionPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompetitionPage.m; sourceTree = "<group>"; };
+		EE3C3CBF233C404800F683BC /* ActiveCompetitionsTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveCompetitionsTab.h; sourceTree = "<group>"; };
+		EE3C3CC0233C404800F683BC /* AvailableCompetitionsTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvailableCompetitionsTab.m; sourceTree = "<group>"; };
+		EE3C3CC1233C404800F683BC /* CompetitionsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompetitionsPage.h; sourceTree = "<group>"; };
+		EE3C3CC2233C404800F683BC /* WonCompetitionsTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WonCompetitionsTab.h; sourceTree = "<group>"; };
+		EE3C3CC3233C404800F683BC /* CompetitionPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompetitionPage.h; sourceTree = "<group>"; };
+		EE3C3CC9233C411D00F683BC /* TitleImageAndDescriptionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleImageAndDescriptionView.h; sourceTree = "<group>"; };
+		EE3C3CCA233C411D00F683BC /* TitleImageAndDescriptionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleImageAndDescriptionView.m; sourceTree = "<group>"; };
 		EE48ACFB231E21F3001CA79A /* BikeObservationProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeObservationProperties.h; sourceTree = "<group>"; };
 		EE48ACFC231E21F3001CA79A /* BikeObservationProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BikeObservationProperties.m; sourceTree = "<group>"; };
 		EE51A7CC230BBCFA004B3CED /* TrackPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackPage.h; sourceTree = "<group>"; };
@@ -1055,8 +1068,6 @@
 		EE6A5DD2231E47C7006B9884 /* BikeObservationBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BikeObservationBase.h; sourceTree = "<group>"; };
 		EE711A8B230F39090070EFCD /* STSPair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STSPair.h; sourceTree = "<group>"; };
 		EE711A8C230F39090070EFCD /* STSPair.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STSPair.m; sourceTree = "<group>"; };
-		EE71EB1B22C466BF004F3231 /* PrizesPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrizesPage.h; sourceTree = "<group>"; };
-		EE71EB1C22C466BF004F3231 /* PrizesPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrizesPage.m; sourceTree = "<group>"; };
 		EE71EB1F22C466E6004F3231 /* BadgesPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BadgesPage.h; sourceTree = "<group>"; };
 		EE71EB2022C466E6004F3231 /* BadgesPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BadgesPage.m; sourceTree = "<group>"; };
 		EE71EB2322C46720004F3231 /* BikesPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BikesPage.h; sourceTree = "<group>"; };
@@ -1496,16 +1507,8 @@
 		EEC4F281230E493E0097316D /* TrackDetailsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackDetailsView.m; sourceTree = "<group>"; };
 		EEC55ADF230BBF6A00FABB1F /* MapDisplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapDisplay.h; sourceTree = "<group>"; };
 		EEC55AE0230BBF6A00FABB1F /* MapDisplay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapDisplay.m; sourceTree = "<group>"; };
-		EECF53FC22FBD2FF0021EA7D /* CompetitionPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompetitionPage.h; sourceTree = "<group>"; };
-		EECF53FD22FBD2FF0021EA7D /* CompetitionPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompetitionPage.m; sourceTree = "<group>"; };
 		EECF53FF22FBE6770021EA7D /* BackendRequestParticipateInCompetition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackendRequestParticipateInCompetition.h; sourceTree = "<group>"; };
 		EECF540022FBE6770021EA7D /* BackendRequestParticipateInCompetition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackendRequestParticipateInCompetition.m; sourceTree = "<group>"; };
-		EECF540222FBF4ED0021EA7D /* AvailableCompetitionsTab.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AvailableCompetitionsTab.h; sourceTree = "<group>"; };
-		EECF540322FBF4ED0021EA7D /* AvailableCompetitionsTab.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AvailableCompetitionsTab.m; sourceTree = "<group>"; };
-		EECF540522FBF51F0021EA7D /* ActiveCompetitionsTab.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActiveCompetitionsTab.h; sourceTree = "<group>"; };
-		EECF540622FBF51F0021EA7D /* ActiveCompetitionsTab.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActiveCompetitionsTab.m; sourceTree = "<group>"; };
-		EECF540822FBF5470021EA7D /* WonCompetitionsTab.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WonCompetitionsTab.h; sourceTree = "<group>"; };
-		EECF540922FBF5470021EA7D /* WonCompetitionsTab.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WonCompetitionsTab.m; sourceTree = "<group>"; };
 		EECF540B22FBFA7D0021EA7D /* BackendRequestCancelParticipationInCompetition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackendRequestCancelParticipationInCompetition.h; sourceTree = "<group>"; };
 		EECF540C22FBFA7D0021EA7D /* BackendRequestCancelParticipationInCompetition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackendRequestCancelParticipationInCompetition.m; sourceTree = "<group>"; };
 		EED1438022C2EA2D00B66EDE /* drawer_icon_badges@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drawer_icon_badges@2x.png"; sourceTree = "<group>"; };
@@ -2631,6 +2634,23 @@
 			path = ItemList;
 			sourceTree = "<group>";
 		};
+		EE3C3CB9233C404800F683BC /* Competitions */ = {
+			isa = PBXGroup;
+			children = (
+				EE3C3CBF233C404800F683BC /* ActiveCompetitionsTab.h */,
+				EE3C3CBA233C404800F683BC /* AvailableCompetitionsTab.h */,
+				EE3C3CC3233C404800F683BC /* CompetitionPage.h */,
+				EE3C3CC1233C404800F683BC /* CompetitionsPage.h */,
+				EE3C3CC2233C404800F683BC /* WonCompetitionsTab.h */,
+				EE3C3CBC233C404800F683BC /* ActiveCompetitionsTab.m */,
+				EE3C3CC0233C404800F683BC /* AvailableCompetitionsTab.m */,
+				EE3C3CBE233C404800F683BC /* CompetitionPage.m */,
+				EE3C3CBB233C404800F683BC /* CompetitionsPage.m */,
+				EE3C3CBD233C404800F683BC /* WonCompetitionsTab.m */,
+			);
+			path = Competitions;
+			sourceTree = "<group>";
+		};
 		EE51A7CB230BBCEA004B3CED /* Track */ = {
 			isa = PBXGroup;
 			children = (
@@ -2649,23 +2669,6 @@
 				EE711A8C230F39090070EFCD /* STSPair.m */,
 			);
 			path = Tools;
-			sourceTree = "<group>";
-		};
-		EE71EB1A22C466AB004F3231 /* Prizes */ = {
-			isa = PBXGroup;
-			children = (
-				EE71EB1B22C466BF004F3231 /* PrizesPage.h */,
-				EE71EB1C22C466BF004F3231 /* PrizesPage.m */,
-				EECF53FC22FBD2FF0021EA7D /* CompetitionPage.h */,
-				EECF53FD22FBD2FF0021EA7D /* CompetitionPage.m */,
-				EECF540222FBF4ED0021EA7D /* AvailableCompetitionsTab.h */,
-				EECF540322FBF4ED0021EA7D /* AvailableCompetitionsTab.m */,
-				EECF540522FBF51F0021EA7D /* ActiveCompetitionsTab.h */,
-				EECF540622FBF51F0021EA7D /* ActiveCompetitionsTab.m */,
-				EECF540822FBF5470021EA7D /* WonCompetitionsTab.h */,
-				EECF540922FBF5470021EA7D /* WonCompetitionsTab.m */,
-			);
-			path = Prizes;
 			sourceTree = "<group>";
 		};
 		EE71EB1E22C466D9004F3231 /* Badges */ = {
@@ -3632,12 +3635,12 @@
 		EEE65D9D22C2466A00D25489 /* Page */ = {
 			isa = PBXGroup;
 			children = (
+				EE3C3CB9233C404800F683BC /* Competitions */,
 				EEB35C3E230F70F8008544E8 /* Bike */,
 				EE51A7CB230BBCEA004B3CED /* Track */,
 				EE71EB2622C4674C004F3231 /* About */,
 				EE71EB2222C46717004F3231 /* Bikes */,
 				EE71EB1E22C466D9004F3231 /* Badges */,
-				EE71EB1A22C466AB004F3231 /* Prizes */,
 				EED143C222C2F79B00B66EDE /* Tracks */,
 				EEE65DA222C2466A00D25489 /* Auth */,
 				EEE65D9E22C2466A00D25489 /* Home */,
@@ -3692,6 +3695,8 @@
 				EE11370422D2F7CE000E0EA9 /* GridPatch.m */,
 				EEC55ADF230BBF6A00FABB1F /* MapDisplay.h */,
 				EEC55AE0230BBF6A00FABB1F /* MapDisplay.m */,
+				EE3C3CC9233C411D00F683BC /* TitleImageAndDescriptionView.h */,
+				EE3C3CCA233C411D00F683BC /* TitleImageAndDescriptionView.m */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -4375,6 +4380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEC40C5D22C46EAF0026DB6E /* STSGeoJSONPolygon.m in Sources */,
+				EE3C3CCB233C411D00F683BC /* TitleImageAndDescriptionView.m in Sources */,
 				EEC40C5522C46EAF0026DB6E /* STSJSONStreamParser.m in Sources */,
 				EEC40BF322C46EAF0026DB6E /* STSAttributedLabel.m in Sources */,
 				EEC40C5822C46EAF0026DB6E /* STSJSONParser.m in Sources */,
@@ -4393,7 +4399,6 @@
 				EEC40BB922C46EAF0026DB6E /* STSGridItemView.m in Sources */,
 				EEA0C16A231EE9B50020C689 /* STSSQLiteDBConnection.m in Sources */,
 				EE5C256D22D0623D00E8E7CD /* BackendRequestGetMyCompetitionsCurrent.m in Sources */,
-				EE71EB1D22C466BF004F3231 /* PrizesPage.m in Sources */,
 				EEC40BC222C46EAF0026DB6E /* STSMessageDialog.m in Sources */,
 				EEC40C0922C46EAF0026DB6E /* STSDownloadQueue.m in Sources */,
 				EEC40C4C22C46EAF0026DB6E /* UIView+Toast.m in Sources */,
@@ -4411,7 +4416,6 @@
 				EEC40BA822C46EAF0026DB6E /* M13ProgressViewLetterpress.m in Sources */,
 				EEC40BA722C46EAF0026DB6E /* M13ProgressViewBar.m in Sources */,
 				EEC40BD722C46EAF0026DB6E /* UIViewController+MMDrawerController.m in Sources */,
-				EECF540422FBF4ED0021EA7D /* AvailableCompetitionsTab.m in Sources */,
 				EEA0C16C231EE9B50020C689 /* STSSQLQueryConditionBuilder.m in Sources */,
 				EE3B9DB7230A3CE9000CBAC7 /* LocalItemList.m in Sources */,
 				EEC40BB522C46EAF0026DB6E /* M13ProgressHUD.m in Sources */,
@@ -4439,8 +4443,8 @@
 				EE17498322F15FB600F953B6 /* TrackingSessionPoint.m in Sources */,
 				EEC40BB822C46EAF0026DB6E /* STSGridItemViewCell.m in Sources */,
 				EEC40BA022C46EAF0026DB6E /* HideableWindow.m in Sources */,
-				EECF53FE22FBD2FF0021EA7D /* CompetitionPage.m in Sources */,
 				EEC40BEE22C46EAF0026DB6E /* STSRemoteImageView.m in Sources */,
+				EE3C3CC6233C404800F683BC /* WonCompetitionsTab.m in Sources */,
 				EEE65DB922C2471D00D25489 /* MenuView.m in Sources */,
 				EEA0C175231EE9B50020C689 /* STSSQLInsertQueryBuilder.m in Sources */,
 				AA589E641FD24B1B006FAAA0 /* AppDelegate.m in Sources */,
@@ -4461,7 +4465,6 @@
 				EEC40C6322C46EAF0026DB6E /* STSGeoJSONPoint.m in Sources */,
 				EEA0C171231EE9B50020C689 /* STSSQLCreateTableQueryBuilder.m in Sources */,
 				EE5C257922D0632C00E8E7CD /* BackendRequestGetMyTags.m in Sources */,
-				EECF540A22FBF5470021EA7D /* WonCompetitionsTab.m in Sources */,
 				EE5C253622D05F7B00E8E7CD /* CompetitionPrize.m in Sources */,
 				EEC40BB222C46EAF0026DB6E /* M13ProgressViewSegmentedBar.m in Sources */,
 				EEE65DB122C2466B00D25489 /* MainView.m in Sources */,
@@ -4472,7 +4475,6 @@
 				EEC40BD322C46EAF0026DB6E /* STSPageStackAction.m in Sources */,
 				EE5C255D22D05F8600E8E7CD /* Sponsor.m in Sources */,
 				EE5BCF9B22D2E15F00924098 /* BadgesBadgesTab.m in Sources */,
-				EECF540722FBF51F0021EA7D /* ActiveCompetitionsTab.m in Sources */,
 				EEC40C1122C46EAF0026DB6E /* STSCachedFileDownloader.m in Sources */,
 				EEC40BA622C46EAF0026DB6E /* M13ProgressViewMetroDotPolygon.m in Sources */,
 				EEC40C6B22C46EAF0026DB6E /* NOOPTranslations.m in Sources */,
@@ -4527,11 +4529,13 @@
 				EEA0C16F231EE9B50020C689 /* STSSQLDeleteQueryBuilder.m in Sources */,
 				EEC40BA322C46EAF0026DB6E /* STSMessageBox.m in Sources */,
 				EEA0C176231EE9B50020C689 /* STSSQLUpdateQueryBuilder.m in Sources */,
+				EE3C3CC4233C404800F683BC /* CompetitionsPage.m in Sources */,
 				EEC40BEB22C46EAF0026DB6E /* STSButtonTheme.m in Sources */,
 				EEA0C177231EE9B50020C689 /* STSSQLDataTypeInfo.m in Sources */,
 				EEC40C6222C46EAF0026DB6E /* STSGeoJSONObject.m in Sources */,
 				EEC40C3022C46EAF0026DB6E /* STSTypeConversion.m in Sources */,
 				EEC40C6F22C46EAF0026DB6E /* STSI18N.m in Sources */,
+				EE3C3CC7233C404800F683BC /* CompetitionPage.m in Sources */,
 				EEC40BEA22C46EAF0026DB6E /* STSImageButton.m in Sources */,
 				EE71EB2122C466E6004F3231 /* BadgesPage.m in Sources */,
 				EE60EF4B23079AB100F5B3AF /* Database.m in Sources */,
@@ -4595,6 +4599,7 @@
 				EEC40C5022C46EAF0026DB6E /* STSJSONStreamWriterAccumulator.m in Sources */,
 				EEC40C5422C46EAF0026DB6E /* STSJSONStreamParserAdapter.m in Sources */,
 				EEE65DAF22C2466B00D25489 /* AuthPage.m in Sources */,
+				EE3C3CC8233C404800F683BC /* AvailableCompetitionsTab.m in Sources */,
 				EEC40C6622C46EAF0026DB6E /* STSGeoLocalizer.m in Sources */,
 				EEC40BCF22C46EAF0026DB6E /* STSPageStackPage.m in Sources */,
 				EEE65DB322C2466B00D25489 /* TopLevelViewController.m in Sources */,
@@ -4632,6 +4637,7 @@
 				EEC0642222F91E3000102082 /* CompetitionParticipation.m in Sources */,
 				EEC40C4722C46EAF0026DB6E /* STSIRect.m in Sources */,
 				EEC40C0722C46EAF0026DB6E /* STSURLRequest.m in Sources */,
+				EE3C3CC5233C404800F683BC /* ActiveCompetitionsTab.m in Sources */,
 				EEE65DBC22C2486500D25489 /* TextButton.m in Sources */,
 				EEC40BED22C46EAF0026DB6E /* STSTextButton.m in Sources */,
 				EEC40BA222C46EAF0026DB6E /* UIView+OBDropZone.m in Sources */,

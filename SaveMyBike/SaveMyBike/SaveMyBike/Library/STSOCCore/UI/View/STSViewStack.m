@@ -103,6 +103,12 @@
 	m_pCurrentView.frame = self.bounds;
 }
 
+- (void)didMoveToWindow
+{
+	if((!self.window) && m_pCurrentView)
+		[self setCurrentView:nil];
+}
+
 - (void)_activateView:(UIView *)pView
 {
 	for(UIView * v in m_pViews)

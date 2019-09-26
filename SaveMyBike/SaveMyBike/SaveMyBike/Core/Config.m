@@ -16,7 +16,7 @@ static Config * g_pConfig = nil;
 	_applicationName = @"Save My Bike";
 	
 	_versionString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
-	_releaseDate = @"2019.08.27";
+	_releaseDate = @"2019.09.25";
 	
 	//_serverURL = @"https://goodgo.savemybike.geo-solutions.it";
 	_serverURL = @"https://dev.savemybike.geo-solutions.it";

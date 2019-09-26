@@ -13,8 +13,9 @@
 #import "STSI18N.h"
 #import "STSViewStack.h"
 #import "BadgeDescriptor.h"
+#import "AppDelegate.h"
 
-@interface BadgesBadgesTab()<STSViewStackView>
+@interface BadgesBadgesTab()<STSViewStackView,NotificationDelegate>
 {
 	BadgeDescriptor * m_pDescriptor;
 }
@@ -91,11 +92,19 @@
 - (void)onActivate
 {
 	[self startItemListFetchRequest];
+	[[AppDelegate instance] addNotificationDelegate:self];
 }
 
 - (void)onDeactivate
 {
+	[[AppDelegate instance] removeNotificationDelegate:self];
 	[self stopItemListFetchRequest];
+}
+
+- (void)onNotificationReceived:(NSString *)sMessage
+{
+	if([sMessage isEqualToString:@"badge_won"])
+		[self refresh];
 }
 
 

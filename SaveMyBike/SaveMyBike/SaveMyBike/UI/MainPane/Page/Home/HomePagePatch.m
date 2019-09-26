@@ -95,7 +95,7 @@
 	}
 	if([m_sTarget isEqualToString:@"prizes"])
 	{
-		[[MainView instance] pushPrizesPage];
+		[[MainView instance] pushCompetitionsPage];
 		return;
 	}
 	if([m_sTarget isEqualToString:@"tracks/record"])

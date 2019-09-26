@@ -14,7 +14,7 @@
 
 @interface CompetitionPage : Page
 
-- (id)initWithCompetition:(Competition *)cmp andParticipation:(CompetitionParticipation *)cp;
+- (id)initWithCompetition:(Competition *)cmp participation:(CompetitionParticipation *)cp isWon:(bool)bIsWon;
 
 @end
 

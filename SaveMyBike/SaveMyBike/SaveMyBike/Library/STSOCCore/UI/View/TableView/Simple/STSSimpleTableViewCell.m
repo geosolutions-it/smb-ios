@@ -15,9 +15,13 @@
 	if(!self)
 		return nil;
 	
-	self.grid = [STSGridLayoutView new];
+	_topOuterMargin = 0.0;
+	_bottomOuterMargin = 0.0;
+	_leftOuterMargin = 0.0;
+	_rightOuterMargin = 0.0;
+	_grid = [STSGridLayoutView new];
 	
-	[self.contentView addSubview:self.grid];
+	[self.contentView addSubview:_grid];
 
 	/*
 	[super imageView].hidden = true;
@@ -28,11 +32,18 @@
 	return self;
 }
 
+- (CGSize)intrinsicContentSize;
+{
+	CGSize s = [self.grid intrinsicContentSize];
+	
+	return CGSizeMake(s.width + _leftOuterMargin + _rightOuterMargin, s.height + _topOuterMargin + _bottomOuterMargin);
+}
+
 - (void)layoutSubviews
 {
 	CGSize s = self.frame.size;
 	self.contentView.frame = CGRectMake(0,0,s.width,s.height);
-	self.grid.frame = CGRectMake(0,0,s.width,s.height);
+	self.grid.frame = CGRectMake(_leftOuterMargin,_topOuterMargin,s.width - _rightOuterMargin - _leftOuterMargin,s.height - _topOuterMargin - _bottomOuterMargin);
 	[self.grid layoutSubviews];
 }
 
@@ -48,14 +59,9 @@
 	[self.grid setNeedsLayout];
 }
 
-- (CGSize)intrinsicContentSize
-{
-	return [self.grid intrinsicContentSize];
-}
-
 - (CGSize)sizeThatFits:(CGSize)size
 {
-	return [self.grid sizeThatFits:size];
+	return [self.grid sizeThatFits:CGSizeMake(size.width - _leftOuterMargin - _rightOuterMargin, size.height - _topOuterMargin - _bottomOuterMargin)];
 }
 
 @end

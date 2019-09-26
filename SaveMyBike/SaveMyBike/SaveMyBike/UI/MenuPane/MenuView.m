@@ -194,7 +194,7 @@ static MenuView * g_pMenuView = nil;
 
 	if([sId isEqualToString:@"trophy"])
 	{
-		[[MainView instance] switchToPrizesPage];
+		[[MainView instance] switchToCompetitionsPage];
 		return;
 	}
 	
@@ -230,7 +230,7 @@ static MenuView * g_pMenuView = nil;
 	
 	if([sId isEqualToString:@"prizes"])
 	{
-		[[MainView instance] switchToPrizesPage];
+		[[MainView instance] switchToCompetitionsPage];
 		return;
 	}
 	

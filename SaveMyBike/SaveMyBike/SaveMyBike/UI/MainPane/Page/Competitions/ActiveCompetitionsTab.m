@@ -13,8 +13,10 @@
 #import "STSI18n.h"
 #import "CompetitionPage.h"
 #import "MainView.h"
+#import "STSDisplay.h"
+#import "AppDelegate.h"
 
-@interface ActiveCompetitionsTab()
+@interface ActiveCompetitionsTab()<NotificationDelegate>
 {
 }
 
@@ -39,6 +41,31 @@
 		pCell.iconView.image = [UIImage imageNamed:@"competition_participating"];
 	else
 		pCell.iconView.image = [UIImage imageNamed:@"competition_waiting"];
+}
+
+- (STSSimpleTableViewCell *)onCreateTableViewCell
+{
+	STSSimpleTableViewCellWithImageAndTwoLabels * pCell = (STSSimpleTableViewCellWithImageAndTwoLabels *)[super onCreateTableViewCell];
+	
+	STSDisplay * dpy = [STSDisplay instance];
+	
+	CGFloat m = [dpy millimetersToScreenUnits:1.0];
+	CGFloat m2 = [dpy minorScreenDimensionFractionToScreenUnits:0.05];
+	
+	pCell.topOuterMargin = m2;
+	pCell.leftOuterMargin = m2;
+	pCell.rightOuterMargin = m2;
+	pCell.bottomOuterMargin = m;
+	
+	pCell.grid.backgroundColor = [UIColor whiteColor];
+	pCell.grid.layer.cornerRadius = [dpy centimetersToScreenUnits:0.1];
+	pCell.grid.layer.shadowColor = [[UIColor blackColor] CGColor];
+	pCell.grid.layer.shadowOpacity = 0.5;
+	pCell.grid.layer.shadowRadius = [dpy centimetersToScreenUnits:0.1];
+	pCell.grid.layer.shadowOffset = CGSizeMake(0.0, [dpy centimetersToScreenUnits:0.1]);
+	pCell.grid.clipsToBounds = true;
+	pCell.grid.layer.masksToBounds = false;
+	return pCell;
 }
 
 - (NSMutableArray< NSObject * > *)onGetItemsFromRequest:(BackendPagedRequest *)pRequest
@@ -68,11 +95,21 @@
 - (void)onActivate
 {
 	[self refresh];
+	[[AppDelegate instance] addNotificationDelegate:self];
 }
 
 - (void)onDeactivate
 {
+	[[AppDelegate instance] removeNotificationDelegate:self];
 	[self stopItemListFetchRequest];
 }
+
+- (void)onNotificationReceived:(NSString *)sMessage
+{
+	if([sMessage isEqualToString:@"prize_won"])
+		[self refresh];
+}
+
+
 
 @end

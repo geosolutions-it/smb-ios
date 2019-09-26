@@ -3,7 +3,7 @@
 //  Copyright © 2019 GeoSolutions SaS. All rights reserved.
 //
 
-#import "PrizesPage.h"
+#import "CompetitionsPage.h"
 
 #import "AvailableCompetitionsTab.h"
 #import "ActiveCompetitionsTab.h"
@@ -11,7 +11,7 @@
 #import "STSI18N.h"
 #import "TabView.h"
 
-@interface PrizesPage()
+@interface CompetitionsPage()
 {
 	TabView * m_pTabView;
 	
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation PrizesPage
+@implementation CompetitionsPage
 
 - (id)init
 {
@@ -35,17 +35,17 @@
 	[self addView:m_pTabView row:0 column:0];
 
 	m_pAvailableTab = [STSTabViewTab new];
-	m_pAvailableTab.text = __trCtx(@"Available",@"PrizesPage");
+	m_pAvailableTab.text = __trCtx(@"Available",@"CompetitionsPage");
 	m_pAvailableTab.createView = ^(){ return [AvailableCompetitionsTab new]; };
 	[m_pTabView addTab:m_pAvailableTab];
 
 	m_pActiveTab = [STSTabViewTab new];
-	m_pActiveTab.text = __trCtx(@"Active",@"PrizesPage");
+	m_pActiveTab.text = __trCtx(@"Active",@"CompetitionsPage");
 	m_pActiveTab.createView = ^(){ return [ActiveCompetitionsTab new]; };
 	[m_pTabView addTab:m_pActiveTab];
 
 	m_pWonTab = [STSTabViewTab new];
-	m_pWonTab.text = __trCtx(@"My Prizes",@"PrizesPage");
+	m_pWonTab.text = __trCtx(@"My Prizes",@"CompetitionsPage");
 	m_pWonTab.createView = ^(){ return [WonCompetitionsTab new]; };
 	[m_pTabView addTab:m_pWonTab];
 

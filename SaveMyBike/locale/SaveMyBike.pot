@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-03 09:42+0200\n"
+"POT-Creation-Date: 2019-09-26 07:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,12 +79,12 @@ msgstr ""
 msgid "N/A"
 msgstr ""
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesBadgesTab.m:82
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesBadgesTab.m:83
 msgctxt "BadgesBadgesTab"
 msgid "No badges"
 msgstr ""
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesBadgesTab.m:83
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesBadgesTab.m:84
 msgctxt "BadgesBadgesTab"
 msgid "You have no badges yet"
 msgstr ""
@@ -127,117 +127,6 @@ msgstr ""
 #, objc-format
 msgctxt "AuthPage"
 msgid "Fetching user data failed: %@"
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/ActiveCompetitionsTab.m:54
-msgctxt "ActivePrizesTab"
-msgid "No competitions"
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/ActiveCompetitionsTab.m:55
-msgctxt "ActiveCompetitionsPage"
-msgid "You aren't participating in any competition at the moment."
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:87
-msgctxt "CompetitionPage"
-msgid "Participate"
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:97
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:159
-msgctxt "CompetitionPage"
-msgid "Cancel Participation"
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:158
-msgctxt "CompetitionPage"
-msgid "Do you really want to cancel the participation in this competition?"
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:161
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:82
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:84
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:86
-msgid "Yes"
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:162
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:82
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:84
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:86
-msgid "No"
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:218
-msgctxt "CompetitionPage"
-msgid "Join Request Failed"
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:223
-msgctxt "CompetitionPage"
-msgid ""
-"Your request to participate in the competition has been received. It will "
-"appear in the \"Active\" tab once it is approved by our team."
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:223
-msgctxt "CompetitionPage"
-msgid "Join Requested"
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:232
-msgctxt "CompetitionPage"
-msgid "Cancel Request Failed"
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:237
-msgctxt "CompetitionPage"
-msgid "Your participation has been canceled."
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/CompetitionPage.m:237
-msgctxt "CompetitionPage"
-msgid "Participation Canceled"
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/AvailableCompetitionsTab.m:51
-msgctxt "ActivePrizesTab"
-msgid "No competitions available"
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/AvailableCompetitionsTab.m:52
-msgctxt "AvailableCompetitionsTab"
-msgid ""
-"There are no active competitions in your area at the moment. Please check "
-"this page in the nexts days"
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/PrizesPage.m:38
-msgctxt "PrizesPage"
-msgid "Available"
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/PrizesPage.m:43
-msgctxt "PrizesPage"
-msgid "Active"
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/PrizesPage.m:48
-msgctxt "PrizesPage"
-msgid "My Prizes"
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/WonCompetitionsTab.m:51
-msgctxt "ActivePrizesTab"
-msgid "No prizes"
-msgstr ""
-
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Prizes/WonCompetitionsTab.m:52
-msgctxt "WonCompetitionsTab"
-msgid ""
-"You haven't won anything yet. Please look at the 'Available' tab and "
-"participate in a competition."
 msgstr ""
 
 #: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Home/HomePage.m:52
@@ -295,6 +184,134 @@ msgstr ""
 #: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Home/HomePage.m:70
 msgctxt "HomePage"
 msgid "Record a new track\n"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/ActiveCompetitionsTab.m:81
+msgctxt "ActivePrizesTab"
+msgid "No competitions"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/ActiveCompetitionsTab.m:82
+msgctxt "ActiveCompetitionsPage"
+msgid "You aren't participating in any competition at the moment."
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:108
+msgctxt "CompetitionPage"
+msgid ""
+"Congratulations!\n"
+"You Won This Competition!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:131
+msgctxt "CompetitionPage"
+msgid "Prizes"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:159
+msgctxt "CompetitionPage"
+msgid "Sponsors"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:189
+msgctxt "CompetitionPage"
+msgid "Participate"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:199
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:261
+msgctxt "CompetitionPage"
+msgid "Cancel Participation"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:260
+msgctxt "CompetitionPage"
+msgid "Do you really want to cancel the participation in this competition?"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:263
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:82
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:84
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:86
+msgid "Yes"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:264
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:82
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:84
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:86
+msgid "No"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:320
+msgctxt "CompetitionPage"
+msgid "Join Request Failed"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:325
+msgctxt "CompetitionPage"
+msgid ""
+"Your request to participate in the competition has been received. It will "
+"appear in the \"Active\" tab once it is approved by our team."
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:325
+msgctxt "CompetitionPage"
+msgid "Join Requested"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:334
+msgctxt "CompetitionPage"
+msgid "Cancel Request Failed"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:339
+msgctxt "CompetitionPage"
+msgid "Your participation has been canceled."
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:339
+msgctxt "CompetitionPage"
+msgid "Participation Canceled"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/AvailableCompetitionsTab.m:79
+msgctxt "ActivePrizesTab"
+msgid "No competitions available"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/AvailableCompetitionsTab.m:80
+msgctxt "AvailableCompetitionsTab"
+msgid ""
+"There are no active competitions in your area at the moment. Please check "
+"this page in the nexts days"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/WonCompetitionsTab.m:77
+msgctxt "ActivePrizesTab"
+msgid "No prizes"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/WonCompetitionsTab.m:78
+msgctxt "WonCompetitionsTab"
+msgid ""
+"You haven't won anything yet. Please look at the 'Available' tab and "
+"participate in a competition."
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionsPage.m:38
+msgctxt "CompetitionsPage"
+msgid "Available"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionsPage.m:43
+msgctxt "CompetitionsPage"
+msgid "Active"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionsPage.m:48
+msgctxt "CompetitionsPage"
+msgid "My Prizes"
 msgstr ""
 
 #: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Track/TrackDetailsView.m:80
@@ -392,12 +409,12 @@ msgctxt "TracksPage"
 msgid "Stats"
 msgstr ""
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksActiveTracksSubTab.m:72
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksActiveTracksSubTab.m:73
 msgctxt "TracksActiveTracksSubTab"
 msgid "No Tracks Available"
 msgstr ""
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksActiveTracksSubTab.m:73
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksActiveTracksSubTab.m:74
 msgctxt "TracksActiveTracksSubTab"
 msgid ""
 "You don't have any track recorded. To create a track, record it using the "
@@ -406,14 +423,14 @@ msgid ""
 "here after the processing ends."
 msgstr ""
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksActiveTracksSubTab.m:82
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksActiveTracksSubTab.m:83
 msgctxt "TracksActiveTracksSubTab"
 msgid ""
 "This track has been identified as invalid. It will not be used in indexes "
 "count and assigning prizes"
 msgstr ""
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksActiveTracksSubTab.m:82
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksActiveTracksSubTab.m:83
 msgctxt "TracksActiveTracksSubTab"
 msgid "Invalid Track"
 msgstr ""
@@ -456,7 +473,7 @@ msgctxt "AboutPage"
 msgid ""
 "v %@ rel %@\n"
 "\n"
-"Copyright @ 2018 Geosolutions SaS"
+"Copyright @ 2018 GeoSolutions SaS"
 msgstr ""
 
 #: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikePage.m:45
@@ -608,6 +625,48 @@ msgstr ""
 #: ../SaveMyBike/SaveMyBike/UI/MenuPane/MenuView.m:99
 msgctxt "MenuView"
 msgid "Sign Out"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/AppDelegate.m:160
+#: ../SaveMyBike/SaveMyBike/AppDelegate.m:165
+#: ../SaveMyBike/SaveMyBike/AppDelegate.m:168
+msgctxt "AppDelegate"
+msgid "Congratulations!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/AppDelegate.m:160
+msgctxt "AppDelegate"
+msgid "Your track has been received and validated"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/AppDelegate.m:162
+msgctxt "AppDelegate"
+msgid "Track Invalid"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/AppDelegate.m:162
+msgctxt "AppDelegate"
+msgid "The track you have sent did not pass our validation rules"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/AppDelegate.m:165
+msgctxt "AppDelegate"
+msgid "You've earned a new badge!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/AppDelegate.m:168
+msgctxt "AppDelegate"
+msgid "You have won a competition!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/AppDelegate.m:171
+msgctxt "AppDelegate"
+msgid "Heads Up!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/AppDelegate.m:171
+msgctxt "AppDelegate"
+msgid "Your bike has been observed!"
 msgstr ""
 
 #: ../SaveMyBike/SaveMyBike/Core/Backend/BackendRequest.m:38
@@ -1202,4 +1261,8 @@ msgid ""
 "Grande! Hai evitato una spesa totale di 24 € grazie ai tuoi spostamenti "
 "sostenibili all’interno della tua città.Risparmiando, hai dato un grande "
 "apporto alla mobilità sostenibile cittadina!"
+msgstr ""
+
+#: ../SaveMyBike/SaveMyBike/Core/UploadManager.m:458
+msgid "upload failed - will rery"
 msgstr ""

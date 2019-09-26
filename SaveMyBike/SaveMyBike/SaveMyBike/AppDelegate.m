@@ -19,9 +19,13 @@
 #import "NotificationManager.h"
 #import <UserNotifications/UserNotifications.h>
 #import "STSNetworkAvailabilityChecker.h"
+#import "STSTypeConversion.h"
+#import "STSDelegateArray.h"
 
 @interface AppDelegate ()<UNUserNotificationCenterDelegate,FIRMessagingDelegate>
-
+{
+	STSDelegateArray * m_pNotificationDelegates;
+}
 @end
 
 static AppDelegate * g_pAppDelegate = nil;
@@ -36,6 +40,8 @@ static AppDelegate * g_pAppDelegate = nil;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	g_pAppDelegate = self;
+	
+	m_pNotificationDelegates = [STSDelegateArray new];
 
 
 	[FIRApp configure];
@@ -68,6 +74,8 @@ static AppDelegate * g_pAppDelegate = nil;
 	//[application setStatusBarHidden:YES animated:NO];
 	//application.statusBarHidden = true;
 
+
+	
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.window.rootViewController = [[TopLevelViewController alloc] init];
 
@@ -75,12 +83,6 @@ static AppDelegate * g_pAppDelegate = nil;
 	
 	[[MainView instance] switchToAuthPage];
 	
-#if defined(TARGET_OS_SIMULATOR) && (TARGET_OS_SIMULATOR != 0)
-	// Trick for buggy iOS simulators that do not refresh. The activity indicator is animating and does refresh.
-	// This does not works for simulators that have the ugly notch in the status bar (iPhone X and friends)
-	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-#endif
-
 	if ([UNUserNotificationCenter class] != nil) {
 		// iOS 10 or later
 		// For iOS 10 display notification (sent via APNS)
@@ -100,19 +102,26 @@ static AppDelegate * g_pAppDelegate = nil;
 	
 	[application registerForRemoteNotifications];
 	
+#if defined(TARGET_OS_SIMULATOR) && (TARGET_OS_SIMULATOR != 0)
+	// Trick for buggy iOS simulators that do not refresh. The activity indicator is animating and does refresh.
+	// This does not works for simulators that have the ugly notch in the status bar (iPhone X and friends)
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+#endif
+	
 	[STSNetworkAvailabilityChecker startWithInterval:30];
 	
 	return YES;
 }
 
-
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler
 {
 	STS_CORE_LOG(@"Will present notification");
+	// This is never called: they configured the "content-available" field in the notification which
+	// causes it to be treated as "silent".
 	completionHandler(UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionSound);
 }
 
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^__strong _Nonnull)(void))completionHandler
 {
 	STS_CORE_LOG(@"Did receive notification response");
 }
@@ -122,6 +131,17 @@ static AppDelegate * g_pAppDelegate = nil;
 	STS_CORE_LOG(@"Remote message");
 }
 
+- (void)addNotificationDelegate:(id<NotificationDelegate>)d
+{
+	[m_pNotificationDelegates addDelegate:d];
+}
+
+- (void)removeNotificationDelegate:(id<NotificationDelegate>)d
+{
+	[m_pNotificationDelegates removeDelegate:d];
+}
+
+
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
 	STS_CORE_LOG(@"Remote notification");
@@ -129,8 +149,84 @@ static AppDelegate * g_pAppDelegate = nil;
 	{
 		STS_CORE_LOG(@"Data: %@ -> %@",key,[userInfo objectForKey:key]);
 	}
-	completionHandler(UIBackgroundFetchResultNoData);
+	completionHandler(UIBackgroundFetchResultNewData);
+	
+	NSString * sMessage = [STSTypeConversion objectInDictionaryToString:userInfo key:@"message_name" defaultValue:@""];
+
+	if([sMessage isEqualToString:@"track_validated"])
+	{
+		if([STSTypeConversion objectInDictionaryToBool:userInfo key:@"is_valid" defaultValue:false])
+			[self showNotificationWithTitle:__trCtx(@"Congratulations!",@"AppDelegate") body:__trCtx(@"Your track has been received and validated",@"AppDelegate")];
+		else
+			[self showNotificationWithTitle:__trCtx(@"Track Invalid",@"AppDelegate") body:__trCtx(@"The track you have sent did not pass our validation rules",@"AppDelegate")];
+	} else if([sMessage isEqualToString:@"badge_won"])
+	{
+		[self showNotificationWithTitle:__trCtx(@"Congratulations!",@"AppDelegate") body:__trCtx(@"You've earned a new badge!",@"AppDelegate")];
+	} else if([sMessage isEqualToString:@"prize_won"])
+	{
+		[self showNotificationWithTitle:__trCtx(@"Congratulations!",@"AppDelegate") body:__trCtx(@"You have won a competition!",@"AppDelegate")];
+	} else if([sMessage isEqualToString:@"bike_observed"])
+	{
+		[self showNotificationWithTitle:__trCtx(@"Heads Up!",@"AppDelegate") body:__trCtx(@"Your bike has been observed!",@"AppDelegate")];
+	}
+
+	if(m_pNotificationDelegates.count > 0)
+		[m_pNotificationDelegates performSelectorOnAllDelegates:@selector(onNotificationReceived:) withObject:sMessage];
 }
+
+- (void)showNotificationWithTitle:(NSString *)sTitle body:(NSString *)sBody
+{
+	UNMutableNotificationContent * c = [UNMutableNotificationContent new];
+	c.title = sTitle;
+	c.body = sBody;
+	
+	UNNotificationTrigger * t = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:0.1 repeats:false];
+	
+	NSString * tag = [NSString stringWithFormat:@"%d%ld%d",rand(),time(NULL),rand()];
+	
+	UNNotificationRequest * rq = [UNNotificationRequest requestWithIdentifier:tag content:c trigger:t];
+	
+	[[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:rq withCompletionHandler:nil];
+}
+
+/*
+ 
+ 2019-09-26 05:09:32.813195+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Remote notification
+ 2019-09-26 05:09:32.813296+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: track_id -> 475
+ 2019-09-26 05:09:32.813334+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: validation_errors -> ,segment_speed_too_high (max_speed: 8.915696553607683 - foot)
+ 2019-09-26 05:09:32.813414+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: aps -> {
+ "content-available" = 1;
+ }
+ 2019-09-26 05:09:32.813444+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: message_name -> track_validated
+ 2019-09-26 05:09:32.813473+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: is_valid -> false
+ 2019-09-26 05:09:32.813502+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: user_uuid -> 3377c67f-92cb-4f2b-9eec-15372fd72661
+ 2019-09-26 05:09:32.813531+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: gcm.message_id -> 1569467372028209
+ 2019-09-26 05:09:32.813589+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: session_id -> 1569467338116
+ 2019-09-26 05:09:32.813619+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: user -> 3377c67f-92cb-4f2b-9eec-15372fd72661
+ (lldb)
+ 
+ 2019-09-26 05:11:28.164021+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Remote notification
+ 2019-09-26 05:11:28.164437+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: track_id -> 476
+ 2019-09-26 05:11:28.164511+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: validation_errors ->
+ 2019-09-26 05:11:28.164670+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: aps -> {
+ "content-available" = 1;
+ }
+ 2019-09-26 05:11:28.164798+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: message_name -> track_validated
+ 2019-09-26 05:11:28.164865+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: is_valid -> true
+ 2019-09-26 05:11:28.164926+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: user_uuid -> 3377c67f-92cb-4f2b-9eec-15372fd72661
+ 2019-09-26 05:11:28.164985+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: gcm.message_id -> 1569467487866874
+ 2019-09-26 05:11:28.165044+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: session_id -> 1569467460576
+ 2019-09-26 05:11:28.165102+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: user -> 3377c67f-92cb-4f2b-9eec-15372fd72661
+ 2019-09-26 05:11:36.491469+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Remote notification
+ 2019-09-26 05:11:36.491609+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: gcm.message_id -> 1569467488439705
+ 2019-09-26 05:11:36.491848+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: user -> 3377c67f-92cb-4f2b-9eec-15372fd72661
+ 2019-09-26 05:11:36.492362+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: message_name -> indexes_have_been_calculated
+ 2019-09-26 05:11:36.492492+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: track_id -> 476
+ 2019-09-26 05:11:36.492646+0200 SaveMyBike[745:150895] [-[AppDelegate application:didReceiveRemoteNotification:fetchCompletionHandler:]:81aba700] Data: aps -> {
+ "content-available" = 1;
+ }
+ 
+ */
 
 - (void)messaging:(FIRMessaging *)messaging didReceiveRegistrationToken:(NSString *)fcmToken
 {
@@ -152,19 +248,14 @@ static AppDelegate * g_pAppDelegate = nil;
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-	// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-	// Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-	// Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-	// If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-	// Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
 }
 
 
@@ -184,7 +275,9 @@ static AppDelegate * g_pAppDelegate = nil;
 	[Database destroy];
 	[Globals done];
 	[Config done];
-	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+	
+	[m_pNotificationDelegates removeAllDelegates];
+	m_pNotificationDelegates = nil;
 }
 
 - (void)applyLanguage

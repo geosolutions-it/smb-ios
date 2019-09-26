@@ -18,6 +18,12 @@
 #import "STSMessageBox.h"
 #import "STSProgressDialog.h"
 #import "STSI18n.h"
+#import "TextButton.h"
+#import "TitleImageAndDescriptionView.h"
+#import "Prize.h"
+#import "Sponsor.h"
+#import "Config.h"
+#import "STSSingleViewScroller.h"
 
 @interface CompetitionPage()<STSTextButtonDelegate,BackendRequestDelegate,STSMessageBoxDelegate>
 {
@@ -41,11 +47,16 @@
 
 @implementation CompetitionPage
 
-- (id)initWithCompetition:(Competition *)cmp andParticipation:(CompetitionParticipation *)cp
+- (id)initWithCompetition:(Competition *)cmp participation:(CompetitionParticipation *)cp isWon:(bool)bIsWon
 {
 	self = [super init];
 	if(!self)
 		return nil;
+	
+	STSSingleViewScroller * pScroller = [STSSingleViewScroller new];
+	[self addView:pScroller row:0 column:0];
+	
+	STSGridLayoutView * g = [STSGridLayoutView new];
 	
 	STSDisplay * dpy = [STSDisplay instance];
 	
@@ -54,8 +65,13 @@
 	
 	m_pProgressDialog = nil;
 	
+	int r = 0;
+	
 	m_pImageView = [STSImageView new];
-	if(cp)
+	if(bIsWon)
+	{
+		m_pImageView.image = [UIImage imageNamed:@"competition_won"];
+	} else if(cp)
 	{
 		if([cp.registrationStatus isEqualToString:@"approved"])
 			m_pImageView.image = [UIImage imageNamed:@"competition_participating"];
@@ -64,49 +80,135 @@
 	} else {
 		m_pImageView.image = [UIImage imageNamed:@"competition"];
 	}
-	[self addView:m_pImageView row:0 column:0];
+	[g addView:m_pImageView row:r column:0 verticalSizePolicy:STSSizePolicyIgnore horizontalSizePolicy:STSSizePolicyIgnore];
+	r++;
 	
 	m_pTitleLabel = [STSLabel new];
 	m_pTitleLabel.font = [UIFont boldSystemFontOfSize:[dpy centimetersToFontUnits:0.4]];
 	m_pTitleLabel.text = cmp.name;
-	[self addView:m_pTitleLabel row:0 column:1];
+	m_pTitleLabel.textColor = [Config instance].highlight1Color;
+	m_pTitleLabel.textAlignment = NSTextAlignmentLeft;
+	[g addView:m_pTitleLabel row:r column:0 rowSpan:1 columnSpan:2 verticalSizePolicy:STSSizePolicyCanExpand horizontalSizePolicy:STSSizePolicyIgnore];
+	r++;
 	
 	m_pDescriptionLabel = [STSLabel new];
 	m_pDescriptionLabel.text = cmp.description;
-	[self addView:m_pDescriptionLabel row:1 column:0 rowSpan:1 columnSpan:2];
+	m_pDescriptionLabel.lineBreakMode = NSLineBreakByWordWrapping;
+	[g addView:m_pDescriptionLabel row:r column:0 rowSpan:1 columnSpan:2 verticalSizePolicy:STSSizePolicyCanExpand horizontalSizePolicy:STSSizePolicyIgnore];
+	r++;
 	
-	
-	[self setRow:7 expandWeight:1000];
+	if(bIsWon)
+	{
+		STSGridLayoutView * glv = [STSGridLayoutView new];
+		
+		glv.backgroundColor = [Config instance].highlight1Color;
+		
+		STSLabel * l = [STSLabel new];
+		l.font = [UIFont boldSystemFontOfSize:[dpy centimetersToFontUnits:0.4]];
+		l.text = __trCtx(@"Congratulations!\nYou Won This Competition!",@"CompetitionPage");
+		l.numberOfLines = 2;
+		l.textColor = [UIColor whiteColor];
+		l.textAlignment = NSTextAlignmentCenter;
+		[glv addView:l row:r column:0 verticalSizePolicy:STSSizePolicyCanExpand horizontalSizePolicy:STSSizePolicyIgnore];
+		[glv setMargin:[dpy minorScreenDimensionFractionToScreenUnits:0.05]];
 
-	int iRow = 8;
+		glv.layer.cornerRadius = [dpy centimetersToScreenUnits:0.1];
+		glv.layer.shadowColor = [[UIColor blackColor] CGColor];
+		glv.layer.shadowOpacity = 0.5;
+		glv.layer.shadowRadius = [dpy centimetersToScreenUnits:0.1];
+		glv.layer.shadowOffset = CGSizeMake(0.0, [dpy centimetersToScreenUnits:0.1]);
+		glv.clipsToBounds = true;
+		glv.layer.masksToBounds = false;
+		
+		[g addView:glv row:r column:0 rowSpan:1 columnSpan:2 verticalSizePolicy:STSSizePolicyFixed horizontalSizePolicy:STSSizePolicyIgnore];
+		r++;
+	}
 	
+	if(cmp.prizes && (cmp.prizes.count > 0))
+	{
+		STSLabel * l = [STSLabel new];
+		l.font = [UIFont boldSystemFontOfSize:[dpy centimetersToFontUnits:0.3]];
+		l.text = __trCtx(@"Prizes",@"CompetitionPage");
+		l.textColor = [Config instance].highlight1Color;
+		[g addView:l row:r column:0 rowSpan:1 columnSpan:2 verticalSizePolicy:STSSizePolicyCanExpand horizontalSizePolicy:STSSizePolicyIgnore];
+		r++;
+		
+		for(CompetitionPrize * cpr in cmp.prizes)
+		{
+			if(!cpr.prize)
+				continue;
+			if(!cpr.prize.name)
+				continue;
+			// FIXME: Sponsor?
+			TitleImageAndDescriptionView * tid = [
+					[TitleImageAndDescriptionView alloc]
+						 	initWithTitle:cpr.prize.name
+							imageURL:cpr.prize.image
+							placeholder:@""
+							description:cpr.prize.description
+				];
+			[g addView:tid row:r column:0 rowSpan:1 columnSpan:2];
+			r++;
+		}
+	}
+	
+	if(cmp.sponsors && (cmp.sponsors.count > 0))
+	{
+		STSLabel * l = [STSLabel new];
+		l.font = [UIFont boldSystemFontOfSize:[dpy centimetersToFontUnits:0.3]];
+		l.text = __trCtx(@"Sponsors",@"CompetitionPage");
+		l.textColor = [Config instance].highlight1Color;
+		[g addView:l row:r column:0 rowSpan:1 columnSpan:2 verticalSizePolicy:STSSizePolicyCanExpand horizontalSizePolicy:STSSizePolicyIgnore];
+		r++;
+		
+		for(Sponsor * spn in cmp.sponsors)
+		{
+			if(!spn.name)
+				continue;
+
+			TitleImageAndDescriptionView * tid = [
+					  [TitleImageAndDescriptionView alloc]
+							  initWithTitle:spn.name
+							  imageURL:spn.logo
+							  placeholder:@""
+							  description:spn.url
+				];
+			tid.openURL = spn.url;
+			[g addView:tid row:r column:0 rowSpan:1 columnSpan:2];
+			r++;
+		}
+	}
+	
+	[g setRow:r expandWeight:1000];
+	r++;
+
 	if(!m_pParticipation)
 	{
-		m_pParticipateButton = [STSTextButton new];
+		m_pParticipateButton = [TextButton new];
 		m_pParticipateButton.payload = @"participate";
 		m_pParticipateButton.text = __trCtx(@"Participate", @"CompetitionPage");
 		[m_pParticipateButton setDelegate:self];
-		[self addView:m_pParticipateButton row:iRow column:0 rowSpan:1 columnSpan:2];
-		iRow++;
+		[g addView:m_pParticipateButton row:r column:0 rowSpan:1 columnSpan:2];
+		r++;
 	}
 
 	if(m_pParticipation)
 	{
-		m_pCancelParticipationButton = [STSTextButton new];
+		m_pCancelParticipationButton = [TextButton new];
 		m_pCancelParticipationButton.payload = @"cancelParticipation";
 		m_pCancelParticipationButton.text = __trCtx(@"Cancel Participation", @"CompetitionPage");
 		[m_pCancelParticipationButton setDelegate:self];
-		[self addView:m_pCancelParticipationButton row:iRow column:0 rowSpan:1 columnSpan:2];
-		iRow++;
+		[g addView:m_pCancelParticipationButton row:r column:0 rowSpan:1 columnSpan:2];
+		r++;
 	}
 
-	[self setColumn:0 fixedWidth:[dpy minorScreenDimensionFractionToScreenUnits:0.3]];
-	[self setRow:0 fixedHeight:[dpy minorScreenDimensionFractionToScreenUnits:0.3]];
-	
+	[g setColumn:0 fixedWidth:[dpy minorScreenDimensionFractionToScreenUnits:0.3]];
+	[g setRow:0 fixedHeight:[dpy minorScreenDimensionFractionToScreenUnits:0.3]];
 
+	[g setMargin:[dpy minorScreenDimensionFractionToScreenUnits:0.07]];
+	[g setSpacing:[dpy minorScreenDimensionFractionToScreenUnits:0.04]];
 
-	[self setMargin:[dpy centimetersToScreenUnits:0.2]];
-	[self setSpacing:[dpy centimetersToScreenUnits:0.1]];
+	[pScroller setView:g];
 
 	return self;
 }

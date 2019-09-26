@@ -19,8 +19,9 @@
 #import "STSSimpleTableView.h"
 #import "TrackTableCell.h"
 #import "STSMessageBox.h"
+#import "AppDelegate.h"
 
-@interface TracksActiveTracksSubTab()<STSViewStackView>
+@interface TracksActiveTracksSubTab()<STSViewStackView,NotificationDelegate>
 
 @end
 
@@ -88,11 +89,20 @@
 - (void)onActivate
 {
 	[self startItemListFetchRequest];
+	[[AppDelegate instance] addNotificationDelegate:self];
 }
 
 - (void)onDeactivate
 {
+	[[AppDelegate instance] removeNotificationDelegate:self];
 	[self stopItemListFetchRequest];
 }
+
+- (void)onNotificationReceived:(NSString *)sMessage
+{
+	if([sMessage isEqualToString:@"track_validated"])
+		[self refresh];
+}
+
 
 @end

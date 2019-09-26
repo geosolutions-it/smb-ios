@@ -15,8 +15,6 @@
 	- (void)setDescription:(NSString *)sDescription;
 	- (NSString *)image;
 	- (void)setImage:(NSString *)sImage;
-	- (NSString *)url;
-	- (void)setUrl:(NSString *)sUrl;
 	- (Sponsor *)sponsor;
 	- (void)setSponsor:(Sponsor *)oSponsor;
 

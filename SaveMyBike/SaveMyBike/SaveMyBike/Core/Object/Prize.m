@@ -12,8 +12,6 @@
 
 	NSString * m_sImage;
 
-	NSString * m_sUrl;
-
 	Sponsor * m_oSponsor;
 
 }
@@ -50,16 +48,6 @@
 - (void)setImage:(NSString *)sImage
 {
 	m_sImage = sImage;
-}
-
-- (NSString *)url
-{
-	return m_sUrl;
-}
-
-- (void)setUrl:(NSString *)sUrl
-{
-	m_sUrl = sUrl;
 }
 
 - (Sponsor *)sponsor
@@ -105,13 +93,6 @@
 		m_sImage = nil;
 	} else {
 		m_sImage = [STSTypeConversion objectToString:ob withDefault:nil];
-	}
-	ob = [d objectForKey:@"url"];
-	if(!ob)
-	{
-		m_sUrl = nil;
-	} else {
-		m_sUrl = [STSTypeConversion objectToString:ob withDefault:nil];
 	}
 	ob = [d objectForKey:@"sponsor"];
 	if(!ob)
@@ -162,7 +143,6 @@
 	[x setObject:(m_sName ? m_sName : [NSNull null]) forKey:@"name"];
 	[x setObject:(m_sDescription ? m_sDescription : [NSNull null]) forKey:@"description"];
 	[x setObject:(m_sImage ? m_sImage : [NSNull null]) forKey:@"image"];
-	[x setObject:(m_sUrl ? m_sUrl : [NSNull null]) forKey:@"url"];
 	[x setObject:(m_oSponsor ? [m_oSponsor encodeToJSON] : [NSNull null]) forKey:@"sponsor"];
 	return x;
 }

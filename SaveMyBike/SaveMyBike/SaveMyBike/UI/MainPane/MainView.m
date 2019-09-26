@@ -18,7 +18,7 @@
 #import "HomePage.h"
 #import "AuthPage.h"
 #import "BadgesPage.h"
-#import "PrizesPage.h"
+#import "CompetitionsPage.h"
 #import "TracksPage.h"
 #import "BikesPage.h"
 #import "AboutPage.h"
@@ -243,9 +243,9 @@ static MainView * g_pMainView = nil;
 	[bp switchToBadgesTab];
 }
 
-- (void)switchToPrizesPage
+- (void)switchToCompetitionsPage
 {
-	[self _switchToSecondLevelPageWithClass:[PrizesPage class]];
+	[self _switchToSecondLevelPageWithClass:[CompetitionsPage class]];
 }
 
 - (void)switchToBikesPage
@@ -283,9 +283,9 @@ static MainView * g_pMainView = nil;
 	[bp switchToBadgesTab];
 }
 
-- (void)pushPrizesPage
+- (void)pushCompetitionsPage
 {
-	[self _pushPage:[PrizesPage new]];
+	[self _pushPage:[CompetitionsPage new]];
 }
 
 - (void)pushBikesPage
@@ -301,7 +301,12 @@ static MainView * g_pMainView = nil;
 
 - (void)pushCompetitionPage:(Competition *)cmp withParticipation:(CompetitionParticipation *)cp;
 {
-	[self _pushPage:[[CompetitionPage alloc] initWithCompetition:cmp andParticipation:cp]];
+	[self _pushPage:[[CompetitionPage alloc] initWithCompetition:cmp participation:cp isWon:false]];
+}
+
+- (void)pushWonCompetitionPage:(Competition *)cmp withParticipation:(CompetitionParticipation *)cp;
+{
+	[self _pushPage:[[CompetitionPage alloc] initWithCompetition:cmp participation:cp isWon:true]];
 }
 
 - (void)pushTrackPage:(Track *)trk

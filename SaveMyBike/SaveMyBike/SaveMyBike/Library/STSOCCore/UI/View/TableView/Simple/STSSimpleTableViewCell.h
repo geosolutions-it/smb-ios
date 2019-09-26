@@ -14,4 +14,11 @@
 
 @interface STSSimpleTableViewCell : UITableViewCell
 	@property(nonatomic) STSGridLayoutView * grid;
+	@property(nonatomic) CGFloat topOuterMargin;
+	@property(nonatomic) CGFloat bottomOuterMargin;
+	@property(nonatomic) CGFloat leftOuterMargin;
+	@property(nonatomic) CGFloat rightOuterMargin;
+
+
+
 @end

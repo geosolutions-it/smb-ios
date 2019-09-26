@@ -28,7 +28,7 @@
 - (void)switchToHomePage;
 
 - (void)switchToBadgesPage;
-- (void)switchToPrizesPage;
+- (void)switchToCompetitionsPage;
 - (void)switchToAboutPage;
 - (void)switchToBikesPage;
 - (void)switchToTracksPage;
@@ -36,10 +36,11 @@
 - (void)switchToProfilePage;
 
 - (void)pushBadgesPage;
-- (void)pushPrizesPage;
+- (void)pushCompetitionsPage;
 - (void)pushBikesPage;
 - (void)pushTracksPage;
 - (void)pushCompetitionPage:(Competition *)cmp withParticipation:(CompetitionParticipation *)cp;
+- (void)pushWonCompetitionPage:(Competition *)cmp withParticipation:(CompetitionParticipation *)cp;
 - (void)pushTrackPage:(Track *)trk;
 - (void)pushBikePage:(Bike *)bk;
 
