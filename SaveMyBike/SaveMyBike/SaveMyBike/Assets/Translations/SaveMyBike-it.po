@@ -242,10 +242,10 @@ msgstr "Congratulazioni!"
 msgctxt "CompetitionPage"
 msgid ""
 "Congratulations!\n"
-"You Won This Competition!"
+"You won this competition!"
 msgstr ""
 "Congratulazioni!\n"
-"Hai Vinto Questa Competizione!"
+"Hai vinto questa gara!"
 
 #: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:115
 msgctxt "BadgeDescriptor"

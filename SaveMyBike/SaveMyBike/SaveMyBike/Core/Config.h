@@ -9,9 +9,7 @@
 
 
 
-#define SMB_AUTH_DISCOVERY_URL @"https://dev.savemybike.geo-solutions.it/auth/realms/save-my-bike/.well-known/openid-configuration"
-#define SMB_AUTH_CLIENT_ID @"smb-portal"
-#define SMB_AUTH_REDIRECT_URI @"it.geosolutions.savemybike:/oauth2redirect"
+
 
 // DEBUG ONLY: DISABLE IN PRODUCTION
 //#define SMB_IGNORE_ERRORS_IN_USER_UPDATE 1
@@ -33,6 +31,11 @@
 
 @property(nonatomic,readonly) NSString * versionString;
 @property(nonatomic,readonly) NSString * releaseDate;
+
+@property(nonatomic,readonly) NSString * authDiscoveryURL;
+@property(nonatomic,readonly) NSString * authRedirectURI;
+@property(nonatomic,readonly) NSString * authClientId;
+
 
 @property(nonatomic,readonly) NSString * serverURL;
 @property(nonatomic,readonly) NSString * fileUploadServerURL;

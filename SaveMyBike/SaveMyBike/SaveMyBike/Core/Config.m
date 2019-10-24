@@ -16,11 +16,17 @@ static Config * g_pConfig = nil;
 	_applicationName = @"Save My Bike";
 	
 	_versionString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
-	_releaseDate = @"2019.09.25";
+	_releaseDate = @"2019.09.27";
 	
-	//_serverURL = @"https://goodgo.savemybike.geo-solutions.it";
-	_serverURL = @"https://dev.savemybike.geo-solutions.it";
-	_fileUploadServerURL = @"https://ex2rxvvhpc.execute-api.us-west-2.amazonaws.com/prod";
+	_serverURL = @"https://goodgo.savemybike.geo-solutions.it";
+	//_serverURL = @"https://dev.savemybike.geo-solutions.it";
+	//_fileUploadServerURL = @"https://ex2rxvvhpc.execute-api.us-west-2.amazonaws.com/prod/upload-dev";
+	_fileUploadServerURL = @"https://ex2rxvvhpc.execute-api.us-west-2.amazonaws.com/prod/upload";
+
+	//_authDiscoveryURL = @"https://dev.savemybike.geo-solutions.it/auth/realms/save-my-bike/.well-known/openid-configuration";
+	_authDiscoveryURL = @"https://goodgo.savemybike.geo-solutions.it/auth/realms/save-my-bike/.well-known/openid-configuration";
+	_authClientId = @"smb-portal";
+	_authRedirectURI = @"it.geosolutions.savemybike:/oauth2redirect";
 	
 	// white
 	_generalBackgroundColor = [UIColor colorWithIntValue:0xffffffff];

@@ -151,7 +151,7 @@
 	
 	for(NSString * sV in trk.vehicleTypes)
 	{
-		UIImage * img = [UIImage imageNamed:[NSString stringWithFormat:@"track_stats_%@",sV]];
+		UIImage * img = [UIImage imageNamed:[NSString stringWithFormat:@"track_stats_%@",[sV isEqualToString:@"foot"] ? @"walk" : sV]];
 		m_pVehicleView[i].image = img ? img : [UIImage imageNamed:@"track_stats_car"];
 		i--;
 		if(i < 0)

@@ -268,6 +268,11 @@ enum AuthState
 
 - (void)textButtonTapped:(STSTextButton *)pButton
 {
+	if(![[AuthManager instance] haveValidServiceConfiguration])
+	{
+		[[AuthManager instance] startServiceDiscovery];
+		return;
+	}
 	[[AuthManager instance] startAuthRequest];
 }
 

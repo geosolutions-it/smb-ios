@@ -14,7 +14,7 @@
 
 - (bool)start:(bool)bTriggerErrorInCaseOfFailure
 {
-	self.URL = [NSString stringWithFormat:@"%@/upload-dev/%@",[Config instance].fileUploadServerURL,self.fileName];
+	self.URL = [NSString stringWithFormat:@"%@/%@",[Config instance].fileUploadServerURL,self.fileName];
 	self.method = @"PUT";
 	self.acceptEmptyResponse = true;
 	//self.captureOutputInCaseOfError = true;

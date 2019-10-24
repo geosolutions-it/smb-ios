@@ -45,6 +45,8 @@ typedef enum _AuthManagerState
 - (void)startServiceDiscovery;
 - (bool)handleOpenURL:(NSURL *)oURL;
 
+- (bool)haveValidServiceConfiguration;
+
 - (void)startAuthRequest;
 
 - (void)startAuthStateCheck;

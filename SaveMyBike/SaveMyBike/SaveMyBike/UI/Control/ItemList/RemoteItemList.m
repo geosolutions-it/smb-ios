@@ -11,11 +11,13 @@
 #import "STSI18N.h"
 #import "BackendPagedRequest.h"
 #import "Config.h"
+#import "STSSimpleTableView.h"
 
 @interface RemoteItemList()<BackendRequestDelegate>
 {
 	bool m_bReceivedResponse;
 	BackendPagedRequest * m_pRequest;
+	UIRefreshControl * m_pRefreshControl;
 }
 
 @end
@@ -28,10 +30,23 @@
 	if(!self)
 		return nil;
 	
+	m_pRefreshControl = [UIRefreshControl new];
+	m_pRefreshControl.tintColor = [UIColor whiteColor];
+	[m_pRefreshControl addTarget:self action:@selector(refreshIfNotInProgress:) forControlEvents:UIControlEventValueChanged];
+	self.tableView.refreshControl = m_pRefreshControl;
+	
 	m_bReceivedResponse = false;
 	m_pRequest = nil;
 
 	return self;
+}
+
+- (void)refreshIfNotInProgress:(id)sender
+{
+	if(m_pRequest)
+		return;
+	[m_pRefreshControl endRefreshing];
+	[self refresh];
 }
 
 - (bool)refresh
@@ -45,6 +60,8 @@
 	if(m_pRequest || m_bReceivedResponse)
 		return false;
 
+	[m_pRefreshControl endRefreshing];
+	
 	m_pRequest = [self onCreateRequest];
 	if(!m_pRequest)
 		return false;

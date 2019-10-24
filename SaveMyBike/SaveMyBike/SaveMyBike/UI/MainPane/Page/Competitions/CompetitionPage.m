@@ -55,6 +55,7 @@
 	
 	STSSingleViewScroller * pScroller = [STSSingleViewScroller new];
 	[self addView:pScroller row:0 column:0];
+	[pScroller setFillViewport:true];
 	
 	STSGridLayoutView * g = [STSGridLayoutView new];
 	
@@ -105,7 +106,7 @@
 		
 		STSLabel * l = [STSLabel new];
 		l.font = [UIFont boldSystemFontOfSize:[dpy centimetersToFontUnits:0.4]];
-		l.text = __trCtx(@"Congratulations!\nYou Won This Competition!",@"CompetitionPage");
+		l.text = __trCtx(@"Congratulations!\nYou won this competition!",@"CompetitionPage");
 		l.numberOfLines = 2;
 		l.textColor = [UIColor whiteColor];
 		l.textAlignment = NSTextAlignmentCenter;
@@ -181,27 +182,30 @@
 	
 	[g setRow:r expandWeight:1000];
 	r++;
-
-	if(!m_pParticipation)
+	
+	if(!bIsWon)
 	{
-		m_pParticipateButton = [TextButton new];
-		m_pParticipateButton.payload = @"participate";
-		m_pParticipateButton.text = __trCtx(@"Participate", @"CompetitionPage");
-		[m_pParticipateButton setDelegate:self];
-		[g addView:m_pParticipateButton row:r column:0 rowSpan:1 columnSpan:2];
-		r++;
-	}
+		if(!m_pParticipation)
+		{
+			m_pParticipateButton = [TextButton new];
+			m_pParticipateButton.payload = @"participate";
+			m_pParticipateButton.text = __trCtx(@"Participate", @"CompetitionPage");
+			[m_pParticipateButton setDelegate:self];
+			[g addView:m_pParticipateButton row:r column:0 rowSpan:1 columnSpan:2 verticalSizePolicy:STSSizePolicyCanExpand horizontalSizePolicy:STSSizePolicyIgnore];
+			r++;
+		}
 
-	if(m_pParticipation)
-	{
-		m_pCancelParticipationButton = [TextButton new];
-		m_pCancelParticipationButton.payload = @"cancelParticipation";
-		m_pCancelParticipationButton.text = __trCtx(@"Cancel Participation", @"CompetitionPage");
-		[m_pCancelParticipationButton setDelegate:self];
-		[g addView:m_pCancelParticipationButton row:r column:0 rowSpan:1 columnSpan:2];
-		r++;
+		if(m_pParticipation)
+		{
+			m_pCancelParticipationButton = [TextButton new];
+			m_pCancelParticipationButton.payload = @"cancelParticipation";
+			m_pCancelParticipationButton.text = __trCtx(@"Cancel Participation", @"CompetitionPage");
+			[m_pCancelParticipationButton setDelegate:self];
+			[g addView:m_pCancelParticipationButton row:r column:0 rowSpan:1 columnSpan:2 verticalSizePolicy:STSSizePolicyCanExpand horizontalSizePolicy:STSSizePolicyIgnore];
+			r++;
+		}
 	}
-
+	
 	[g setColumn:0 fixedWidth:[dpy minorScreenDimensionFractionToScreenUnits:0.3]];
 	[g setRow:0 fixedHeight:[dpy minorScreenDimensionFractionToScreenUnits:0.3]];
 

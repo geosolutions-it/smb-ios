@@ -200,7 +200,7 @@ msgstr ""
 msgctxt "CompetitionPage"
 msgid ""
 "Congratulations!\n"
-"You Won This Competition!"
+"You won this competition!"
 msgstr ""
 
 #: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:131

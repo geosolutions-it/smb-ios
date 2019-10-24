@@ -115,6 +115,7 @@
 	} else {
 		if((d.statusCode == 403) && (!m_bRetriedAfterAuthError))
 		{
+			STS_CORE_LOG(@"Request received access denied and can retry after authentication");
 			// Access denied
 			m_bRetriedAfterAuthError = true;
 			if([[AuthManager instance] retryRequestAfterAuthentication:self])

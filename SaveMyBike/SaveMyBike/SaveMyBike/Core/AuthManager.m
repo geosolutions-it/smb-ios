@@ -94,6 +94,7 @@ static AuthManager * g_pAuthManager = nil;
 
 - (bool)retryRequestAfterAuthentication:(BackendRequest *)r
 {
+	STS_CORE_LOG(@"Requested to retry request after authentication");
 	switch(m_eState)
 	{
 		case AuthManagerStateIdle:
@@ -146,12 +147,16 @@ static AuthManager * g_pAuthManager = nil;
 
 - (void)saveState
 {
+	NSString * ap = [NSString stringWithFormat:@"%@ %@ %@",[Config instance].authClientId,[Config instance].authDiscoveryURL,[Config instance].authRedirectURI];
+	
 	if(m_pAuthState)
 	{
 		NSData *archivedAuthState = [NSKeyedArchiver archivedDataWithRootObject:m_pAuthState];
 		[[NSUserDefaults standardUserDefaults] setObject:archivedAuthState forKey:@"auth-state"];
+		[[NSUserDefaults standardUserDefaults] setObject:ap forKey:@"auth-key"];
 	} else {
 		[[NSUserDefaults standardUserDefaults] removeObjectForKey:@"auth-state"];
+		[[NSUserDefaults standardUserDefaults] removeObjectForKey:@"auth-key"];
 	}
 
 	[[NSUserDefaults standardUserDefaults] synchronize];
@@ -159,7 +164,19 @@ static AuthManager * g_pAuthManager = nil;
 
 - (void)loadState
 {
+	m_pAuthState = nil;
+	
+	NSString * savedAP = [[NSUserDefaults standardUserDefaults] objectForKey:@"auth-key"];
+	if(!savedAP)
+		return; // no previous key: bad auth
+	
+	NSString * ap = [NSString stringWithFormat:@"%@ %@ %@",[Config instance].authClientId,[Config instance].authDiscoveryURL,[Config instance].authRedirectURI];
+
+	if(![savedAP isEqualToString:ap])
+		return; // parameters changed!
+	
 	NSData *archivedAuthState = [[NSUserDefaults standardUserDefaults] objectForKey:@"auth-state"];
+
 	m_pAuthState = [NSKeyedUnarchiver unarchiveObjectWithData:archivedAuthState];
 	if(![m_pAuthState isAuthorized])
 	{
@@ -208,7 +225,7 @@ static AuthManager * g_pAuthManager = nil;
 
 	[self _setState:AuthManagerStateDiscoveringService];
 	
-	NSURL * oURL = [NSURL URLWithString:SMB_AUTH_DISCOVERY_URL];
+	NSURL * oURL = [NSURL URLWithString:[Config instance].authDiscoveryURL];
 	
 	AuthManager * that = self;
 	
@@ -225,6 +242,11 @@ static AuthManager * g_pAuthManager = nil;
 					[that onServiceDiscoverySucceeded:configuration];
 				}
 		];
+}
+
+- (bool)haveValidServiceConfiguration
+{
+	return m_pConfiguration;
 }
 
 - (bool)haveValidAuthState
@@ -254,13 +276,16 @@ static AuthManager * g_pAuthManager = nil;
 
 - (void)startAuthRequest
 {
+	if(!m_pConfiguration)
+		return;
+	
 	STS_CORE_LOG(@"Starting auth request");
 
 	OIDAuthorizationRequest *request = [[OIDAuthorizationRequest alloc]
 							initWithConfiguration:m_pConfiguration
-							clientId:SMB_AUTH_CLIENT_ID
+							clientId:[Config instance].authClientId
 							scopes:@[OIDScopeOpenID,OIDScopeEmail,OIDScopeProfile]
-							redirectURL:[NSURL URLWithString:SMB_AUTH_REDIRECT_URI]
+							redirectURL:[NSURL URLWithString:[Config instance].authRedirectURI]
 							responseType:OIDResponseTypeCode
 							additionalParameters:nil
 		];
@@ -289,13 +314,8 @@ static AuthManager * g_pAuthManager = nil;
 
 	[self _setState:AuthManagerStateRefreshingTokens];
 	[m_pAuthState performActionWithFreshTokens:^(NSString * _Nullable accessToken, NSString * _Nullable idToken, NSError * _Nullable error) {
-		if(accessToken != nil)
+		if((accessToken == nil) || (error != nil))
 		{
-			[self saveState];
-			[Globals instance].authToken = accessToken;
-			[self _setState:AuthManagerStateLoggedIn];
-			[self startAllPendingRequests];
-		} else {
 			m_pAuthState = nil;
 			[self saveState];
 			m_sError = [error localizedDescription];
@@ -305,6 +325,12 @@ static AuthManager * g_pAuthManager = nil;
 			else
 				[self _setState:AuthManagerStateError];
 			[self failAllPendingRequests:m_sError];
+		} else {
+			[self saveState];
+			[Globals instance].authToken = accessToken;
+			[self _setState:AuthManagerStateLoggedIn];
+			[self startAllPendingRequests];
+
 		}
 	}];
 }
@@ -319,7 +345,7 @@ static AuthManager * g_pAuthManager = nil;
 	OIDEndSessionRequest * rq = [[OIDEndSessionRequest alloc]
 			 initWithConfiguration:m_pConfiguration
 				 idTokenHint:[Globals instance].authToken
-				 postLogoutRedirectURL:[NSURL URLWithString:SMB_AUTH_REDIRECT_URI]
+				 postLogoutRedirectURL:[NSURL URLWithString:[Config instance].authRedirectURI]
 				 additionalParameters:nil
 		];
 	
