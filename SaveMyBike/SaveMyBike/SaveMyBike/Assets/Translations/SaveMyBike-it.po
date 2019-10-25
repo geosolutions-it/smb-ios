@@ -1088,7 +1088,7 @@ msgid ""
 "Tap on the map or search for a location to indicate where you've seen the "
 "bike last time"
 msgstr ""
-"Tocca la mappa per indicare dove hai visto la bici l\'ultima volta"
+"Tocca la mappa per indicare dove hai visto la bici l'ultima volta"
 
 #: ../SaveMyBike/SaveMyBike/AppDelegate.m:162
 msgctxt "AppDelegate"

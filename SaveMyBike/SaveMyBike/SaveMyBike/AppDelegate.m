@@ -14,6 +14,7 @@
 #import "NSData+Hashing.h"
 #import "NSData+Base64.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import <GooglePlaces/GooglePlaces.h>
 #import <Firebase.h>
 #import "STSCore.h"
 #import "NotificationManager.h"

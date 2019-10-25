@@ -33,6 +33,12 @@
 - (void)_init
 {
 	m_oEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+	
+	
+	UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(resignFirstResponder)];
+	UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+	toolbar.items = [NSArray arrayWithObject:barButton];
+	self.inputAccessoryView = toolbar;
 }
 
 - (void)setMargins:(CGFloat)fAllMargins

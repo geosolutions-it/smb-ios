@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-25 02:49+0200\n"
+"POT-Creation-Date: 2019-10-25 16:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,7 +36,7 @@ msgstr ""
 
 #: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bikes/BikeListView.m:118
 msgctxt "BikeListView"
-msgid "Do you really want to mark this bike as found?"
+msgid "Do you confirm that you have found this bike?"
 msgstr ""
 
 #: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bikes/BikeListView.m:119

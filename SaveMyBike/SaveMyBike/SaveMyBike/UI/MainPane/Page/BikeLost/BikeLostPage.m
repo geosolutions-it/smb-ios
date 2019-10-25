@@ -63,8 +63,9 @@
 	[self addView:l row:1 column:0 rowSpan:1 columnSpan:2];
 	
 	m_pMapDisplay = [MapDisplay new];
-	m_pMapDisplay.mapView.settings.myLocationButton = true;
 	m_pMapDisplay.mapView.delegate = self;
+	[m_pMapDisplay enableMyLocationButton];
+	//[m_pMapDisplay enableSearchBox];
 
 	[self addView:m_pMapDisplay row:2 column:0 rowSpan:1 columnSpan:2];
 	
