@@ -30,6 +30,10 @@ g_config = {
 			"dpi": 480
 		},
 		{
+			"file": "images/lock_*.png",
+			"dpi": 480
+		},
+		{
 			"file": "images/large_gray_icon_*.png",
 			"dpi": 480
 		},
@@ -80,6 +84,10 @@ g_config = {
 		{
 			"file": "images/small_icon_*.png",
 			"dpi": 480
+		},
+		{
+			"file": "images/icon_proceed.png",
+			"dpi": 320
 		},
 		{
 			"file": "images/track_stats_*.png",

@@ -33,7 +33,8 @@
 
 - (void)onPageActivate
 {
-	[m_pListView onActivate];
+	//[m_pListView onActivate];
+	[m_pListView refresh];
 }
 
 - (void)onPageDeactivate

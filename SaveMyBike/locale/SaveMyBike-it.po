@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-26 07:31+0200\n"
+"POT-Creation-Date: 2019-10-25 02:49+0200\n"
 "PO-Revision-Date: 2018-01-06 01:11+0100\n"
 "Last-Translator: Szymon Tomasz Stefanek <s.stefanek@gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
@@ -196,13 +196,13 @@ msgctxt "TrackDetailsView"
 msgid "Calories Consumed"
 msgstr "Calorie Consumate"
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:199
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:261
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:202
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:265
 msgctxt "CompetitionPage"
 msgid "Cancel Participation"
 msgstr "Annulla Partecipazione"
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:334
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:338
 msgctxt "CompetitionPage"
 msgid "Cancel Request Failed"
 msgstr "Richiesta di Annullamento Fallita"
@@ -238,7 +238,7 @@ msgctxt "AppDelegate"
 msgid "Congratulations!"
 msgstr "Congratulazioni!"
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:108
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:109
 msgctxt "CompetitionPage"
 msgid ""
 "Congratulations!\n"
@@ -283,15 +283,20 @@ msgctxt "TrackDetailsView"
 msgid "Depreciation"
 msgstr "Svalutazione"
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/MainView.m:176
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/MainView.m:177
 msgctxt "MainView"
 msgid "Disable GPS Simulation"
 msgstr "Disabilita Simulazione GPS"
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:260
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:264
 msgctxt "CompetitionPage"
 msgid "Do you really want to cancel the participation in this competition?"
 msgstr "Vuoi veramente annullare la partecipazione in questa competizione?"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bikes/BikeListView.m:118
+msgctxt "BikeListView"
+msgid "Do you confirm that you have found this bike?"
+msgstr "Confermi di aver ritrovato questa bici?"
 
 #: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:98
 msgctxt "BadgeDescriptor"
@@ -318,7 +323,7 @@ msgctxt "TrackDetailsView"
 msgid "Emissions and Savings"
 msgstr "Emissioni e Risparmi"
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/MainView.m:176
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/MainView.m:177
 msgctxt "MainView"
 msgid "Enable GPS Simulation"
 msgstr "Abilita Simulazione GPS"
@@ -360,6 +365,11 @@ msgstr "Errore nel decoding dell'oggetto: %s"
 msgctxt "BackendPagedRequest"
 msgid "Failed to decode one of the results: %s"
 msgstr "Errore nella decodifica di uno dei risultati: %s"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bikes/BikeListView.m:165
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/BikeLost/BikeLostPage.m:122
+msgid "Failed to start request"
+msgstr "Errore durante l'avvio della richiesta"
 
 #: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Tracks/TracksRecordTab.m:236
 msgctxt "TracksRecordTab"
@@ -566,17 +576,17 @@ msgctxt "TracksActiveTracksSubTab"
 msgid "Invalid Track"
 msgstr "Traccia non Valida"
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:320
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:324
 msgctxt "CompetitionPage"
 msgid "Join Request Failed"
 msgstr "Richiesta di Partecipazione Fallita"
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:325
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:329
 msgctxt "CompetitionPage"
 msgid "Join Requested"
 msgstr "Partecipazione Richiesta"
 
-#: ../SaveMyBike/SaveMyBike/UI/Control/ItemList/RemoteItemList.m:88
+#: ../SaveMyBike/SaveMyBike/UI/Control/ItemList/RemoteItemList.m:105
 msgctxt "RemoteItemList"
 msgid "Loading Failed"
 msgstr "Caricamento Fallito"
@@ -589,6 +599,11 @@ msgctxt "AuthPage"
 msgid "Loading..."
 msgstr "Caricamento..."
 
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:66
+msgctxt "BikeInfoTab"
+msgid "Lost"
+msgstr "Persa"
+
 #: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Badges/BadgesProfileTab.m:87
 msgctxt "BadgesProfileTab"
 msgid "Mail"
@@ -598,6 +613,11 @@ msgstr "Mail"
 msgctxt "HomePage"
 msgid "Manage your bikes\n"
 msgstr "Gestisci le tue bici\n"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bikes/BikeListView.m:117
+msgctxt "BikeListView"
+msgid "Mark Bike as Found"
+msgstr "Dichiara Ritrovamento"
 
 #: ../SaveMyBike/SaveMyBike/Core/Tools/BadgeDescriptor.m:50
 msgctxt "BadgeDescriptor"
@@ -653,7 +673,11 @@ msgstr "Miei Premi"
 msgid "N/A"
 msgstr "N/D"
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:264
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bikes/BikeListView.m:119
+msgid "NO"
+msgstr "NO"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:268
 #: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:82
 #: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:84
 #: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:86
@@ -680,7 +704,7 @@ msgctxt "BadgesBadgesTab"
 msgid "No badges"
 msgstr "Nessun badge"
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bikes/BikeListView.m:87
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bikes/BikeListView.m:94
 msgctxt "BikeListView"
 msgid "No bikes registered"
 msgstr "Non ci sono biciclette registrate"
@@ -800,17 +824,17 @@ msgctxt "BadgesProfileTab"
 msgid "PM10 Saved"
 msgstr "PM10 Risparmiati"
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:189
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:192
 msgctxt "CompetitionPage"
 msgid "Participate"
 msgstr "Pertecipa"
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:339
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:343
 msgctxt "CompetitionPage"
 msgid "Participation Canceled"
 msgstr "Partecipazione Annullata"
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:131
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:132
 msgctxt "CompetitionPage"
 msgid "Prizes"
 msgstr "Premi"
@@ -1014,7 +1038,7 @@ msgctxt "MenuView"
 msgid "Sign Out"
 msgstr "Esci"
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:159
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:160
 msgctxt "CompetitionPage"
 msgid "Sponsors"
 msgstr "Sponsor"
@@ -1058,6 +1082,13 @@ msgstr ""
 msgctxt "TracksStatsTab"
 msgid "TRACKS"
 msgstr "TRACCE"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/BikeLost/BikeLostPage.m:61
+msgid ""
+"Tap on the map or search for a location to indicate where you've seen the "
+"bike last time"
+msgstr ""
+"Tocca la mappa per indicare dove hai visto la bici l\'ultima volta"
 
 #: ../SaveMyBike/SaveMyBike/AppDelegate.m:162
 msgctxt "AppDelegate"
@@ -1197,19 +1228,27 @@ msgctxt "HomePage"
 msgid "Welcome"
 msgstr "Benvenuto"
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:263
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bikes/BikeListView.m:120
+msgid "YES"
+msgstr "SI"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:267
 #: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:82
 #: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:84
 #: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bike/BikeInfoTab.m:86
 msgid "Yes"
 msgstr "Si"
 
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/BikeLost/BikeLostPage.m:55
+msgid "You are about to report your bike as 'lost', please add some details."
+msgstr "Stai per segnalare questa bici come \"smarrita\". Aggiungi qualche dettaglio."
+
 #: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/ActiveCompetitionsTab.m:82
 msgctxt "ActiveCompetitionsPage"
 msgid "You aren't participating in any competition at the moment."
 msgstr "Al momento non stai partecipando in nessuna competizione."
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bikes/BikeListView.m:88
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Bikes/BikeListView.m:95
 msgctxt "BikeListView"
 msgid ""
 "You did not register any bike yet. Please go to your personal area of the "
@@ -1260,12 +1299,12 @@ msgctxt "AppDelegate"
 msgid "Your bike has been observed!"
 msgstr "La tua bicicletta è stata avvistata!"
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:339
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:343
 msgctxt "CompetitionPage"
 msgid "Your participation has been canceled."
 msgstr "La tua partecipazione è stata annullata."
 
-#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:325
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:329
 msgctxt "CompetitionPage"
 msgid ""
 "Your request to participate in the competition has been received. It will "
@@ -1279,6 +1318,14 @@ msgstr ""
 msgctxt "AppDelegate"
 msgid "Your track has been received and validated"
 msgstr "La tua traccia è stata ricevuta e validata"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/BikeLost/BikeLostPage.m:76
+msgid "additional info"
+msgstr "informazioni aggiuntive"
+
+#: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/BikeLost/BikeLostPage.m:72
+msgid "additional info (optional):"
+msgstr "informazioni aggiuntive (opzionali):"
 
 #: ../SaveMyBike/SaveMyBike/Core/UploadManager.m:458
 msgid "upload failed - will rery"

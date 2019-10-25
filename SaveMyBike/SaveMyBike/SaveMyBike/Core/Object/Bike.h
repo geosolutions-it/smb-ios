@@ -1,6 +1,8 @@
 #import <Foundation/Foundation.h>
 #import "JSONConvertible.h"
 
+@class BikeStatus;
+
 @interface Bike : NSObject<JSONConvertible>
 
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -43,8 +45,8 @@
 	- (void)setHasBags:(bool)bHasBags;
 	- (NSString *)otherDetails;
 	- (void)setOtherDetails:(NSString *)sOtherDetails;
-	- (NSString *)currentStatus;
-	- (void)setCurrentStatus:(NSString *)sCurrentStatus;
+	- (BikeStatus *)currentStatus;
+	- (void)setCurrentStatus:(BikeStatus *)oCurrentStatus;
 
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// JSON Manipulation

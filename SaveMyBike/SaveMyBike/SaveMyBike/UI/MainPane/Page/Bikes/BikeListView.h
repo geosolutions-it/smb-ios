@@ -8,10 +8,14 @@
 
 #import "RemoteItemList.h"
 
+@class Bike;
+
 @interface BikeListView : RemoteItemList
 
 - (void)onActivate;
 - (void)onDeactivate;
+
+- (void)onBikeTableCellStatusButtonPressed:(Bike *)bk;
 
 @end
 

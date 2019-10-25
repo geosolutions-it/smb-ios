@@ -19,6 +19,8 @@
 
 - (void)removeAllOverlays;
 
+- (GMSMapView *)mapView;
+
 - (void)addMarkerWithLatitude:(double)lat longitude:(double)lon title:(NSString *)szTitle andDescription:(NSString *)szDescription;
 - (void)animateToLatitude:(double)lat longitude:(double)lon zoom:(double)z;
 - (void)animateTo:(GMSCoordinateBounds *)bnds;

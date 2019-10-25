@@ -40,6 +40,11 @@
 	return self;
 }
 
+- (GMSMapView *)mapView
+{
+	return m_pMapView;
+}
+
 - (void)removeAllOverlays
 {
 	for(GMSOverlay * o in m_pOverlays)

@@ -63,7 +63,7 @@
 
 	int r = 2;
 	
-	[self _createPair:g row:r left:__trCtx(@"Status",@"BikeInfoTab") right:m_pBike.currentStatus];
+	[self _createPair:g row:r left:__trCtx(@"Status",@"BikeInfoTab") right:m_pBike.currentStatus && m_pBike.currentStatus ? __trCtx(@"Lost",@"BikeInfoTab") : @"-"];
 	r++;
 	[self _createPair:g row:r left:__trCtx(@"Brand",@"BikeInfoTab") right:m_pBike.brand];
 	r++;

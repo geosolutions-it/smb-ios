@@ -43,6 +43,7 @@
 - (void)pushWonCompetitionPage:(Competition *)cmp withParticipation:(CompetitionParticipation *)cp;
 - (void)pushTrackPage:(Track *)trk;
 - (void)pushBikePage:(Bike *)bk;
+- (void)pushBikeLostPage:(Bike *)bk;
 
 - (void)popCurrentPage;
 

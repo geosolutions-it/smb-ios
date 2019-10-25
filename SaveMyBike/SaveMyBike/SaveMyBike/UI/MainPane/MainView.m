@@ -29,6 +29,7 @@
 #import "Globals.h"
 #import "Settings.h"
 #import "STSI18n.h"
+#import "BikeLostPage.h"
 #import "Config.h"
 
 @interface MainView()<STSImageButtonDelegate,STSPageStackViewDelegate,STSPageStackActionDelegate,STSPopupMenuDelegate>
@@ -292,6 +293,12 @@ static MainView * g_pMainView = nil;
 {
 	[self _pushPage:[BikesPage new]];
 }
+
+- (void)pushBikeLostPage:(Bike *)bk
+{
+	[self _pushPage:[[BikeLostPage alloc] initWithBike:bk]];
+}
+
 
 - (void)pushTracksPage
 {

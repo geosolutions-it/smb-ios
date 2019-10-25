@@ -9,10 +9,11 @@
 #import "STSSimpleTableViewCell.h"
 
 @class Bike;
+@class BikeListView;
 
 @interface BikeTableCell : STSSimpleTableViewCell
 
-- (void)setBike:(Bike *)bk;
+- (void)setBike:(Bike *)bk andListView:(BikeListView *)lv;
 
 @end
 

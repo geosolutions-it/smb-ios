@@ -1,4 +1,5 @@
 #import "Bike.h"
+#import "BikeStatus.h"
 #import "STSJSONParser.h"
 #import "STSJSONWriter.h"
 #import "STSTypeConversion.h"
@@ -41,7 +42,7 @@
 
 	NSString * m_sOtherDetails;
 
-	NSString * m_sCurrentStatus;
+	BikeStatus * m_oCurrentStatus;
 
 }
 
@@ -229,14 +230,14 @@
 	m_sOtherDetails = sOtherDetails;
 }
 
-- (NSString *)currentStatus
+- (BikeStatus *)currentStatus
 {
-	return m_sCurrentStatus;
+	return m_oCurrentStatus;
 }
 
-- (void)setCurrentStatus:(NSString *)sCurrentStatus
+- (void)setCurrentStatus:(BikeStatus *)oCurrentStatus
 {
-	m_sCurrentStatus = sCurrentStatus;
+	m_oCurrentStatus = oCurrentStatus;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -399,9 +400,18 @@
 	ob = [d objectForKey:@"current_status"];
 	if(!ob)
 	{
-		m_sCurrentStatus = nil;
+		m_oCurrentStatus = nil;
 	} else {
-		m_sCurrentStatus = [STSTypeConversion objectToString:ob withDefault:nil];
+		NSDictionary * pDict = [STSTypeConversion objectToDictionary:ob withDefault:nil];
+		if(!pDict)
+		{
+			m_oCurrentStatus = nil;
+		} else {
+			m_oCurrentStatus = [BikeStatus new];
+			NSString * szErr = [m_oCurrentStatus decodeJSON:pDict];
+			if((szErr != nil) && (szErr.length > 0))
+				m_oCurrentStatus = nil;
+		}
 	}
 	return nil;
 }
@@ -463,7 +473,7 @@
 	[x setObject:[NSNumber numberWithBool:m_bHasCargoRack] forKey:@"has_cargo_rack"];
 	[x setObject:[NSNumber numberWithBool:m_bHasBags] forKey:@"has_bags"];
 	[x setObject:(m_sOtherDetails ? m_sOtherDetails : [NSNull null]) forKey:@"other_details"];
-	[x setObject:(m_sCurrentStatus ? m_sCurrentStatus : [NSNull null]) forKey:@"current_status"];
+	[x setObject:(m_oCurrentStatus ? [m_oCurrentStatus encodeToJSON] : [NSNull null]) forKey:@"current_status"];
 	return x;
 }
 

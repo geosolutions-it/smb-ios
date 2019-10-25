@@ -17,10 +17,17 @@
 #import "STSSimpleTableView.h"
 #import "MainView.h"
 #import "Bike.h"
+#import "BikeStatus.h"
+#import "STSMessageBox.h"
+#import "Config.h"
+#import "BackendRequestSetBikeStatus.h"
+#import "STSProgressDialog.h"
 
-@interface BikeListView()<STSViewStackView>
+@interface BikeListView()<STSViewStackView,BackendRequestDelegate>
 {
 	BikeTableCell * m_pSampleCell;
+	BackendRequestSetBikeStatus * m_pSetBikeStatusRequest;
+	STSProgressDialog * m_pProgressDialog;
 }
 @end
 
@@ -71,7 +78,7 @@
 {
 	BikeTableCell * pCell = (BikeTableCell *)cell;
 
-	[pCell setBike:(Bike *)ob];
+	[pCell setBike:(Bike *)ob andListView:self];
 }
 
 - (NSMutableArray<NSObject *> *)onGetItemsFromRequest:(BackendPagedRequest *)pRequest
@@ -94,6 +101,87 @@
 	if(!pItem)
 		return; // ?
 	[[MainView instance] pushBikePage:(Bike *)pItem];
+}
+
+- (void)onBikeTableCellStatusButtonPressed:(Bike *)bk
+{
+	if(m_pSetBikeStatusRequest)
+		return;
+	
+	STSMessageBoxParams * mb = [STSMessageBoxParams new];
+	
+	BikeListView * lv = self;
+	
+	if(bk.currentStatus && bk.currentStatus.lost)
+	{
+		mb.title = __trCtx(@"Mark Bike as Found", @"BikeListView");
+		mb.message = __trCtx(@"Do you confirm that you have found this bike?", @"BikeListView");
+		mb.button0Text = __tr(@"NO");
+		mb.button1Text = __tr(@"YES");
+		mb.callback = ^(STSMessageBoxParams *pParams, int iButtonIdx) {
+			if(iButtonIdx != 1)
+				return;
+
+			[lv markBikeAsFound:bk];
+		};
+		
+		[STSMessageBox show:mb];
+		return;
+	}
+	
+	[[MainView instance] pushBikeLostPage:bk];
+}
+
+- (void)showProgressDialog
+{
+	if(m_pProgressDialog)
+		return;
+	m_pProgressDialog = [STSProgressDialog new];
+	[m_pProgressDialog showAsIndeterminate:true];
+}
+
+- (void)hideProgressDialog
+{
+	if(!m_pProgressDialog)
+		return;
+	[m_pProgressDialog close:true];
+	m_pProgressDialog = nil;
+}
+
+- (void)markBikeAsFound:(Bike *)bk
+{
+	if(m_pSetBikeStatusRequest)
+		return;
+	
+	m_pSetBikeStatusRequest = [BackendRequestSetBikeStatus new];
+	m_pSetBikeStatusRequest.lost = false;
+	m_pSetBikeStatusRequest.details = @"";
+	m_pSetBikeStatusRequest.url = @"";
+	m_pSetBikeStatusRequest.bikeUUID = bk.shortUUID;
+	[m_pSetBikeStatusRequest setBackendRequestDelegate:self];
+	
+	if(![m_pSetBikeStatusRequest start])
+	{
+		[STSMessageBox showWithMessage:__tr(@"Failed to start request")];
+		return;
+	}
+	
+	[self showProgressDialog];
+}
+
+- (void)backendRequestCompleted:(BackendRequest *)pRequest
+{
+	if(pRequest == m_pSetBikeStatusRequest)
+	{
+		[self hideProgressDialog];
+		if(!m_pSetBikeStatusRequest.succeeded)
+			[STSMessageBox showWithMessage:m_pSetBikeStatusRequest.error];
+		m_pSetBikeStatusRequest = nil;
+		[self refresh];
+		return;
+	}
+	
+	[super backendRequestCompleted:pRequest];
 }
 
 - (void)onActivate
