@@ -29,6 +29,7 @@
 - (void)animateTo:(GMSCoordinateBounds *)bnds;
 - (void)animateToBoundingBox:(STSLatLongBoundingBox *)box;
 - (void)createPathForPoints:(NSMutableArray<STSGeoCoordinate *> *)coords;
+- (void)zoomToMyLocationWhenAvailable;
 
 @end
 

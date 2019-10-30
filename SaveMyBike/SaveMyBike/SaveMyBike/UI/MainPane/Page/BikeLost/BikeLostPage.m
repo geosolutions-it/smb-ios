@@ -64,6 +64,7 @@
 	
 	m_pMapDisplay = [MapDisplay new];
 	m_pMapDisplay.mapView.delegate = self;
+	[m_pMapDisplay zoomToMyLocationWhenAvailable];
 	[m_pMapDisplay enableMyLocationButton];
 	//[m_pMapDisplay enableSearchBox];
 

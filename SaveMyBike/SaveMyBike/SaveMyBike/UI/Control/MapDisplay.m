@@ -11,13 +11,12 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import <GooglePlaces/GooglePlaces.h>
 
-#import "STSGeoCoordinate.h"
 #import "STSLatLongBoundingBox.h"
 #import "STSDisplay.h"
 
 #import "STSGeoJSONObject.h"
 #import "STSGeoCoordinate.h"
-
+#import "STSGeoLocalizer.h"
 #import "STSCore.h"
 
 
@@ -29,6 +28,7 @@
 	
 	UISearchController * m_pSearchController;
 	GMSAutocompleteResultsViewController * m_pAutocompleteResultsViewController;
+	bool m_bFirstLocationUpdate;
 }
 @end
 
@@ -44,7 +44,14 @@
 	
 	m_pOverlays = [NSMutableArray new];
 	
-	GMSCameraPosition * c = [GMSCameraPosition cameraWithLatitude:43.3182200 longitude:11.3306400 zoom:10];
+	m_bFirstLocationUpdate = true;
+	
+	
+	CLLocation * l = [STSGeoLocalizer instance].lastKnownLocation;
+
+	GMSCameraPosition * c = l ?
+			[GMSCameraPosition cameraWithLatitude:l.coordinate.latitude longitude:l.coordinate.longitude zoom:12] :
+			[GMSCameraPosition cameraWithLatitude:43.0182200 longitude:11.5306400 zoom:6];
 	
 	m_pMapView = [GMSMapView mapWithFrame:CGRectZero camera:c];
 	
@@ -57,6 +64,7 @@
 	[self setColumn:2 fixedWidth:[dpy centimetersToScreenUnits:0.1]];
 	[self setRow:2 expandWeight:1000.0];
 	[self setColumn:1 expandWeight:1000.0];
+	
 	
 	return self;
 }
@@ -185,6 +193,29 @@
 	[m_pOverlays addObject:pl];
 }
 
+- (void)zoomToMyLocationWhenAvailable
+{
+	[m_pMapView addObserver:self forKeyPath:@"myLocation" options:NSKeyValueObservingOptionNew context:nil];
 
+	m_pMapView.myLocationEnabled = true;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+{
+	if(![keyPath isEqualToString:@"myLocation"])
+		return;
+	
+	if(!m_bFirstLocationUpdate)
+		return;
+	
+	CLLocation * l = [change objectForKey:NSKeyValueChangeNewKey];
+	if(!l)
+		return;
+	
+	[m_pMapView animateToCameraPosition:[GMSCameraPosition cameraWithLatitude:l.coordinate.latitude longitude:l.coordinate.longitude zoom:12]];
+	
+	m_bFirstLocationUpdate = true;
+	[m_pMapView removeObserver:self forKeyPath:@"myLocation"];
+}
 
 @end
