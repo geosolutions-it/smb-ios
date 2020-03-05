@@ -827,7 +827,7 @@ msgstr "PM10 Risparmiati"
 #: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:192
 msgctxt "CompetitionPage"
 msgid "Participate"
-msgstr "Pertecipa"
+msgstr "Partecipa"
 
 #: ../SaveMyBike/SaveMyBike/UI/MainPane/Page/Competitions/CompetitionPage.m:343
 msgctxt "CompetitionPage"
